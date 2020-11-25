@@ -5,14 +5,6 @@
 	font-weight: 900;
 	font-style: italic;
   }
-  
-//   $font-size-base: 16px;
-//   $font-family-base: "Open Sans", sans-serif;
-//   $weight-regular: 700;
-//   $font-cerapro: "CeraPRO", sans-serif;
-//   $base-text-color: $black-text;
-//   $base-link-color: $bright-sky-blue;
-//   $base-margin: 18px;
 
 html {
 	@include fontSize($font-size-base);
@@ -69,6 +61,7 @@ h4,
 h5, 
 h6 {
 	margin: 0;
+	margin-top: 0 !important;
 	font-size: inherit;
 }
 
@@ -91,9 +84,10 @@ a,
 }
 
 .container {
-	width: 934px;
+	width: 1200px;
 	margin: 0 auto;
-	padding: 0 50px;
+	padding: 0 12px;
+	position: relative;
 
 	@include until($tablet) {
 		width: 720px;
@@ -105,14 +99,6 @@ a,
 		width: 100%;
 		padding: 0 40px;
 	}
-}
-
-.is-flex {
-	display: flex;
-}
-
-.align-center {
-	align-items: center;
 }
 
 .uppercase {
@@ -133,28 +119,6 @@ a,
 
 .marg-bot-24 {
 	margin-bottom: 24px;
-}
-
-.product-wrap {
-	padding: 28px 0 64px;
-
-	@include until($mobile) {
-		padding-bottom: 40px;
-	}
-}
-
-.desktop {
-	@include until($tablet) {
-		display: none;
-	}
-}
-
-.mobile {
-	display: none;
-
-	@include until($tablet) {
-		display: block;
-	}
 }
 
 a,
@@ -219,9 +183,21 @@ $values: (0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60);
   }
 }
 
+.color-white {
+	color: #fff;
+}
+
 //for ie-11 object-fit
 .img-poly { 
 	font-family: 'object-fit: cover';
 	width: 100%;
 	height: 100%;
+}
+
+.title {
+	margin-bottom: 32px;
+
+	&__main {
+		font-size: 40px;
+	}
 }

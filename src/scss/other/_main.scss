@@ -1,28 +1,19 @@
 .main {
-    position: relative;
-    height: 700px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url('../../img/pics/abstract.jpg');
-    // image-set for FF, only jpg gets downloaded for not supporting browsers
-    background-image: -webkit-image-set(url('../../img/pics/abstract.webp') 1x);
-    background-size: cover;
-    background-repeat: no-repeat;   
-    overflow: hidden;
-
+    padding-top: 66px;
+    height: 600px;
+    
     &:before {
         content: '';
         position: absolute;
-        height: 100%;
+        top: 0;
+        left: 0;
         width: 100%;
-        left: -60%;
-        transform: skew(-45deg);
-        background: #0b0d11;        
-    } 
-    
-    &__info {
-        position: relative;
-        background-color: #e2e3e7;
+        height: 100%;
+        background-image: url('../../img/pics/table-2.jpg');
+        // image-set for FF, only jpg gets downloaded for not supporting browsers
+        background-image: -webkit-image-set(url('../../img/pics/table-2.webp') 1x);
+        background-size: cover;
+        background-repeat: no-repeat;  
+        filter: brightness(0.2); 
     }
 }
