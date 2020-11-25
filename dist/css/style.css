@@ -1268,7 +1268,8 @@ template {
   top: 0;
   left: 0;
   width: 100%;
-  background: #000;
+  background: #e2e3e7;
+  z-index: 10;
 }
 
 /* Menu */
@@ -1289,6 +1290,43 @@ template {
   display: block;
   text-decoration: none;
   margin: 0 12px;
+  color: black;
+}
+
+.main {
+  position: relative;
+  height: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url("../../img/pics/abstract.jpg");
+  background-image: -webkit-image-set(url("../../img/pics/abstract.webp") 1x);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.main:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: -60%;
+  -webkit-transform: skew(-45deg);
+      -ms-transform: skew(-45deg);
+          transform: skew(-45deg);
+  background: #0b0d11;
+}
+
+.main__info {
+  position: relative;
+  background-color: #e2e3e7;
 }
 
 @media screen and (max-width: 933px) {
