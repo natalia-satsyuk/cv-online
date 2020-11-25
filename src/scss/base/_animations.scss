@@ -1,0 +1,132 @@
+@mixin pulceAnimation($name, $color, $speed) {
+    @keyframes #{$name} {
+  
+       0% {
+          box-shadow: 0 0 0 0 rgba($color, .4);
+       }
+  
+       70% {
+          box-shadow: 0 0 0 10px rgba($color, 0);
+       }
+  
+       100% {
+          box-shadow: 0 0 0 0 rgba($color, 0);
+       }
+    }
+  
+    animation: $name $speed infinite;
+  }
+  
+  @mixin pulceAnimationLarge($name, $color, $speed) {
+    @keyframes #{$name} {
+  
+       0% {
+          box-shadow: 0 0 0 0 rgba($color, .4);
+       }
+  
+       70% {
+          box-shadow: 0 0 0 15px rgba($color, 0);
+       }
+  
+       100% {
+          box-shadow: 0 0 0 0 rgba($color, 0);
+       }
+    }
+  
+    animation: $name $speed infinite;
+  }
+  
+  @keyframes spin {
+  
+    from {
+       transform: rotate(0deg);
+    }
+  
+    to {
+       transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes floatMessageHorizontal {
+  
+    from {
+       left: 314px
+    }
+  
+    to {
+       left: 300px
+    }
+  }
+  
+  @keyframes floatMessageVertical {
+  
+    from {
+       top: -30px
+    }
+  
+    to {
+       top: -40px
+    }
+  }
+  
+  @keyframes ring {
+  
+    0% {
+       transform: rotate(0);
+    }
+  
+    9% {
+       transform: rotate(5deg);
+    }
+  
+    18% {
+       transform: rotate(-5deg);
+    }
+  
+    27% {
+       transform: rotate(4deg);
+    }
+  
+    36% {
+       transform: rotate(-4deg);
+    }
+  
+    45% {
+       transform: rotate(3deg);
+    }
+  
+    54% {
+       transform: rotate(-3deg);
+    }
+  
+    63% {
+       transform: rotate(2deg);
+    }
+  
+    72% {
+       transform: rotate(-2deg);
+    }
+  
+    81% {
+       transform: rotate(1deg);
+    }
+  
+    90% {
+       transform: rotate(-1deg);
+    }
+  
+    100% {
+       transform: rotate(0);
+    }
+  }  
+  
+  @keyframes spinAround {
+  
+      from {
+          transform: rotate(0deg);
+      }
+  
+      to {
+          transform: rotate(359deg);
+      }
+  }

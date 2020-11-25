@@ -1,0 +1,33 @@
+/* Header */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+}
+
+/* Menu */
+
+.menu {
+    
+    height: 42px;
+    display: flex;
+    align-items: center;
+}
+
+/* Item */
+
+.menu__link {
+    display: block;    
+    text-decoration: none;
+    margin: 0 12px;
+}
+
+// .menu__item:hover,
+// .menu__item:focus {
+//     outline: none;
+//     background-color: tomato;
+//     color: white;
+// }

@@ -1,0 +1,86 @@
+.variants {
+	display: flex;
+
+	&:focus {
+		outline: 1px solid #7aabff;	
+
+		@include until($tablet) {
+			outline: none;
+		}
+	}
+
+	$root: &;
+
+	&--size {
+		#{$root}__item {
+			border: 1px solid #ccc;
+			background: #fff;
+		}
+	}
+
+	&__item {
+		@include fontSize(12px);
+		position: relative;		
+		width: 40px;
+		height: 40px;
+		margin-right: 12px;
+		border-radius: 50%;
+		font-weight: $weight-semi-bold;
+		cursor: pointer;
+		transition: all .3s ease;
+
+		&--blue {
+			background-color: #77d8e7;
+		}
+
+		&--green {
+			background-color: #96c795;
+		}
+
+		&--pink {
+			background-color: #ce92a1;
+		}
+
+		&--violet {
+			background-color: #aa93cf;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.indicator {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	    position: absolute;
+	    border-radius: 50%;
+	    width: 100%;
+		height: 100%;
+	    top: 0;
+	    left:0 ;
+	    z-index: 5;
+	    transition: all .25s linear;
+	}
+
+	&__item-action {
+		width: 1px;
+	    height: 1px;
+	    overflow: hidden;
+	    opacity: 0;
+
+		&:hover ~ .indicator,
+		&:checked ~ .indicator {
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		}
+
+		&:focus ~ .indicator {
+			border: 1px solid #7aabff;		
+
+			@include until($tablet) {
+				border: none;
+			}	
+		}
+	}
+}

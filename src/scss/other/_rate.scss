@@ -1,0 +1,79 @@
+$star-size: 18px;
+
+.rate {
+	display: flex; 
+	position: relative;   
+    margin-right: 14px;
+    padding: 0;
+    border: none;
+
+	@include until($mobile) {
+		margin-bottom: 30px;
+	}	
+
+	&__group {
+		position: relative;
+		width: $star-size * 5;
+		height: $star-size;
+		background-image: url(../img/svg/star.svg);
+		background-size: $star-size;
+		background-repeat: repeat-x;
+	}
+
+	&__input {
+		position: absolute;
+		width: 1px;
+		height: 1px;    
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+	}	
+
+	&__star {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: $star-size;
+		height: $star-size;  
+		background-size: $star-size;
+		background-repeat: repeat-x;
+		margin: 0;
+		font-size: inherit;
+		appearance: none;
+		-webkit-appearance: none;			
+	}
+
+	&__star:focus {
+		outline: none;
+	}		
+
+	&__input:checked + &__star,
+	&__star:hover {
+		background-image: url(../img/svg/star-active.svg);
+		background-size: $star-size;
+	}
+
+	&__star:nth-of-type(1) {
+		z-index: 5;
+		width: $star-size;
+	}
+
+	&__star:nth-of-type(2) {
+		z-index: 4;
+		width: $star-size * 2;
+	}
+
+	&__star:nth-of-type(3) {
+		z-index: 3;
+		width: $star-size * 3;
+	}
+
+	&__star:nth-of-type(4) {
+		z-index: 2;
+		width: $star-size * 4;
+	}
+
+	&__star:nth-of-type(5) {
+		z-index: 1;
+		width: $star-size * 5;
+	}
+}	

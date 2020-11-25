@@ -1,0 +1,29 @@
+.teaser-slider {
+	display: none;
+
+	@include until($mobile) {
+		display: block;
+	}
+}
+ 
+.slick-arrow {
+	position: absolute;
+	top: 108px;
+	width: 40px;
+	height: 40px;
+	color: transparent;
+	background-size: contain;
+	background-position: center;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.slick-prev {
+	left: -40px;
+	background-image: url(../img/svg/arrow-left.svg);
+}
+
+.slick-next {
+	right: -40px;
+	background-image: url(../img/svg/arrow-right.svg);
+}
