@@ -1,0 +1,23 @@
+.experience-wrap {
+    .title-second {
+        margin-left: -32px;
+    }
+}
+.experience { 
+    &__item {
+        position: relative;
+        padding-left: 32px;
+        margin-bottom: 12px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background-image: url('../../img/svg/creativity.svg');
+        }
+    }
+}

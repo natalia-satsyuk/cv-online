@@ -1,0 +1,32 @@
+.skills {
+    display: flex;
+    justify-content: space-between;
+
+    &__part {
+        width: 49%;
+        padding: 24px;        
+        background: #efe9e9;
+        box-shadow: inset 0px 0px 8px 0px #aba2a2;  
+        
+        &:first-child {
+            margin-right: 24px;
+        }
+    }    
+
+    &__item {
+        position: relative;
+        padding-left: 32px;
+        margin-bottom: 12px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background-image: url('../../img/svg/thought.svg');
+        }
+    }
+}

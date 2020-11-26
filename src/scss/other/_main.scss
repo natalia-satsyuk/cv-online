@@ -8,12 +8,13 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
-        background-image: url('../../img/pics/table-2.jpg');
+        height: 600px;
+        background-image: url('../../img/pics/lights-2.jpg');
         // image-set for FF, only jpg gets downloaded for not supporting browsers
-        background-image: -webkit-image-set(url('../../img/pics/table-2.webp') 1x);
+        background-image: -webkit-image-set(url('../../img/pics/lights-2.webp') 1x);
         background-size: cover;
-        background-repeat: no-repeat;  
+        background-repeat: no-repeat; 
+        background-position: bottom; 
         filter: brightness(0.2); 
     }
 }

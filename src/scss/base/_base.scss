@@ -80,52 +80,9 @@ img {
 
 a,
 .like-a-link {
-	color: $blue;
-}
-
-.container {
-	width: 1200px;
-	margin: 0 auto;
-	padding: 0 12px;
-	position: relative;
-
-	@include until($tablet) {
-		width: 720px;
-		padding: 0 36px;
-	}
-
-	@include until($mobile) {
-		max-width: 400px;
-		width: 100%;
-		padding: 0 40px;
-	}
-}
-
-.uppercase {
-	text-transform: uppercase;
-}
-
-.text-center {
-	text-align: center;
-}
-
-.pointer {
-	cursor: pointer;
-}
-
-.marg-bot-18 {
-	margin-bottom: 18px;
-}
-
-.marg-bot-24 {
-	margin-bottom: 24px;
-}
-
-a,
-.like-a-link {
   text-decoration: underline;
   cursor: pointer;
-  color: $base-link-color;
+  color: $blue;
 
   &:hover {
      text-decoration: none;
@@ -172,6 +129,52 @@ ol:not([class]) {
   }
 }
 
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0 12px;
+	position: relative;
+
+	@include until($tablet) {
+		width: 720px;
+		padding: 0 36px;
+	}
+
+	@include until($mobile) {
+		max-width: 400px;
+		width: 100%;
+		padding: 0 40px;
+	}
+
+	&--left-pad {
+		padding-left: 60px;
+	}
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.marg-bot-18 {
+	margin-bottom: 18px;
+}
+
+.marg-bot-24 {
+	margin-bottom: 24px;
+}
+
+.pad-block {
+	padding: 60px 0;
+}
+
 $directions: ('top', 'right', 'bottom', 'left');
 $values: (0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60);
 
@@ -183,10 +186,6 @@ $values: (0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60);
   }
 }
 
-.color-white {
-	color: #fff;
-}
-
 //for ie-11 object-fit
 .img-poly { 
 	font-family: 'object-fit: cover';
@@ -194,10 +193,30 @@ $values: (0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60);
 	height: 100%;
 }
 
-.title {
+.title-main {
+	font-size: 50px;
 	margin-bottom: 32px;
+}	
 
-	&__main {
-		font-size: 40px;
+.title-second {
+	font-size: 40px;
+	margin-bottom: 24px;
+
+	&--invert {
+		color: #fff;
 	}
+
+	// &--background {
+	// 	height: 100px;
+	// 	background-color: #0a0a0a;
+	// 	display: flex;
+	// 	align-items: flex-end;
+	// 	line-height: 1;
+	// 	color: #fff;
+	// 	padding: 0 24px;
+	// }
+
+	// &--inline {
+	// 	display: inline-flex;
+	// }
 }
