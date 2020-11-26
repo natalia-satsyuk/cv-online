@@ -1,7 +1,15 @@
+.projects-wrap {
+    background-image: url('../../img/pics/squares.jpg');        
+    background-image: -webkit-image-set(url('../../img/pics/squares.webp') 1x);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+
 .projects {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between;    
 
     &__item {
         width: 32%;

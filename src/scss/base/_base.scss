@@ -175,9 +175,19 @@ ol:not([class]) {
 	padding: 60px 0;
 }
 
+.box-shadow-block {
+	border-radius: 2px;
+	box-shadow: 2.5px 4.33px 30px 0px rgb(0, 0, 0);
+	
+	&--pad {
+		padding-top: $pad-vertical-title;
+		padding-bottom: $pad-vertical-title;
+	}
+}
+
 .list-item {
 	position: relative;
-	padding-left: 32px;
+	padding-left: $pad-vertical-title;
 	margin-bottom: 12px;
 }
 
