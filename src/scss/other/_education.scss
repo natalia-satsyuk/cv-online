@@ -1,0 +1,14 @@
+.education {
+    &__item {
+        &:before {
+            @extend %icon-before-list;
+            background-image: url('../../img/svg/thought.svg');
+        }
+    }
+
+    &__sertificate {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

@@ -175,6 +175,22 @@ ol:not([class]) {
 	padding: 60px 0;
 }
 
+.list-item {
+	position: relative;
+	padding-left: 32px;
+	margin-bottom: 12px;
+}
+
+%icon-before-list {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 14px;
+	height: 14px;
+}
+
 $directions: ('top', 'right', 'bottom', 'left');
 $values: (0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60);
 
