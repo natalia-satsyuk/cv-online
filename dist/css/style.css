@@ -384,8 +384,8 @@ ol:not([class]) li {
 
 .box-shadow-block {
   border-radius: 2px;
-  -webkit-box-shadow: 2.5px 4.33px 30px 0px black;
-          box-shadow: 2.5px 4.33px 30px 0px black;
+  -webkit-box-shadow: 0px 0px 17px -3px #000;
+          box-shadow: 0px 0px 17px -3px #000;
 }
 
 .box-shadow-block--pad {
@@ -1445,6 +1445,11 @@ figcaption:after {
 
 .job-wrap {
   margin-bottom: 200px;
+  background-image: url("../../img/pics/lamp.jpg");
+  background-image: -webkit-image-set(url("../../img/pics/lamp.webp") 1x);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .job-wrap .title-second {
@@ -1480,6 +1485,7 @@ figcaption:after {
   display: inline-flex;
   position: relative;
   padding-right: 42px;
+  cursor: pointer;
 }
 
 .dropdown__button {
