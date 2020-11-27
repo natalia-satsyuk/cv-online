@@ -1,0 +1,73 @@
+.job-wrap {
+    margin-bottom: 200px;
+
+    .title-second {
+        margin-bottom: 0;
+        margin-top: -12px !important;
+    }
+}
+
+.dropdown {
+
+    $root: &;
+
+    display: flex;
+    align-items: flex-start;   
+
+    &__block {     
+        position: absolute;
+        left: 100%;
+        top: 0;   
+        width: 100%;
+        padding-left: 24px; 
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1s ease;
+    } 
+    
+    &__click {
+        display: inline-flex;
+        position: relative;
+        padding-right: 42px;
+    }
+
+    &__button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(-90deg);
+        right: 0;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        cursor: pointer;
+        transition: transform 1s ease;
+    }
+
+    &.open {
+        & + #{$root}__block {
+            display: block;
+            visibility: visible;
+            opacity: 1; 
+        }      
+            
+        #{$root}__button {
+            transform: translateY(-50%) rotate(90deg);
+        }
+    }   
+}
+
+.job {    
+    
+    &__item {    
+        &:before {
+            @extend %icon-before-list;
+            background-image: url('../../img/svg/suitcase.svg');
+        }
+    }
+}
+
+.job-helper {
+    display: inline-flex;
+    position: relative;
+}
+

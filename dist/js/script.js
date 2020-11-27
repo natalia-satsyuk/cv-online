@@ -74,3 +74,42 @@ $(document).ready(function(){
   		slidesToScroll: 1	    
 	});
 });
+(function(){
+	let showPopup = document.querySelector('.education__show');
+	let sertificate = document.querySelector('.education__sertificate');
+	let close = document.querySelector('.close');	
+	let body = document.querySelector('body');	
+
+	showPopup.onclick = function () { 
+		sertificate.classList.add('open');
+		body.classList.add('overlay');
+	}
+
+	close.onclick = function () {
+		sertificate.classList.remove('open');
+		body.classList.remove('overlay');
+	}
+})()
+function dropDown(){
+	let jobList = document.querySelector('.dropdown');	
+	let drop = document.querySelector('#dropdown-btn');	
+
+	drop.onclick = function () { 
+		jobList.classList.toggle('open');
+	}	
+}
+
+dropDown()
+
+// window.onclick = function(event) {
+//   if (!event.target.matches('#title')) {
+//     let dropdowns = document.querySelector('.job');
+//     let i;
+//     for (i = 0; i < dropdowns.length; i++) {
+//       let openDropdown = dropdowns[i];
+//       if (openDropdown.classList.contains('open')) {
+//         openDropdown.classList.remove('open');
+//       }
+//     }
+//   }
+// }
