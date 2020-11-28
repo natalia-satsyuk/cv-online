@@ -1,0 +1,58 @@
+.contacts-wrap {
+    background-image: url('../../img/pics/lines.jpg');
+    // image-set for FF, only jpg gets downloaded for not supporting browsers
+    background-image: -webkit-image-set(url('../../img/pics/lines.webp') 1x);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;   
+
+    &__column {
+        flex-direction: column;
+    }
+
+    &__info {
+        flex-grow: 1;
+    }
+
+    &__pic {
+        width: 500px;
+        height: auto;
+    }   
+
+    &__main-item {  
+        &.phone {
+            &:before {
+                @extend %icon-before-list;
+                background-image: url('../../img/svg/creativity.svg');
+            }  
+        }  
+        
+        &.email {
+            &:before {
+                @extend %icon-before-list;
+                background-image: url('../../img/svg/creativity.svg');
+            }  
+        } 
+
+        &.location {
+            &:before {
+                @extend %icon-before-list;
+                background-image: url('../../img/svg/creativity.svg');
+            }  
+        } 
+
+        &.birthday {
+            &:before {
+                @extend %icon-before-list;
+                background-image: url('../../img/svg/creativity.svg');
+            }  
+        } 
+            
+    }
+}
+

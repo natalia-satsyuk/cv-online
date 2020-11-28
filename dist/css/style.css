@@ -383,14 +383,38 @@ ol:not([class]) li {
 }
 
 .box-shadow-block {
+  position: relative;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
   border-radius: 2px;
   -webkit-box-shadow: 0px 0px 17px -3px #000;
           box-shadow: 0px 0px 17px -3px #000;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  -o-transition: transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+.box-shadow-block:hover {
+  -webkit-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+          transform: translateY(-20px);
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  -o-transition: transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
 }
 
 .box-shadow-block--pad {
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.box-shadow-block--pad-all {
+  padding: 32px;
 }
 
 .list-item {
@@ -402,7 +426,11 @@ ol:not([class]) li {
 .experience__item:before,
 .skills__item:before,
 .education__item:before,
-.job__item:before {
+.job__item:before,
+.contacts__main-item.phone:before,
+.contacts__main-item.email:before,
+.contacts__main-item.location:before,
+.contacts__main-item.birthday:before {
   content: '';
   position: absolute;
   left: 0;
@@ -1168,8 +1196,8 @@ template {
 .main {
   padding-top: 66px;
   height: 600px;
-  background-image: url("../../img/pics/lines.jpg");
-  background-image: -webkit-image-set(url("../../img/pics/lines.webp") 1x);
+  background-image: url("../../img/pics/lamp.jpg");
+  background-image: -webkit-image-set(url("../../img/pics/lamp.webp") 1x);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1180,38 +1208,29 @@ template {
 
 .vertical-block {
   position: absolute;
-  width: 60px;
   left: 0;
   top: 0;
-  height: 100%;
-  padding-left: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
 
 .vertical-block__text {
-  position: relative;
-  padding-left: 32px;
+  position: absolute;
+  right: 100%;
+  padding-left: 60px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.vertical-block__text:before {
+.vertical-block__text:after {
   content: '';
-  width: 30px;
-  height: 6px;
   position: absolute;
+  width: 58px;
   left: 0;
   bottom: 0;
-  background: #c30c7a;
+  height: 6px;
+  background: tomato;
 }
 
 .skills {
@@ -1285,6 +1304,7 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: -18px;
 }
 
 .projects__item {
@@ -1397,9 +1417,12 @@ figcaption:after {
 }
 
 .education__show {
-  color: blue;
-  text-decoration: underline;
+  color: #bd7e2f;
   cursor: pointer;
+}
+
+.education__show:hover {
+  text-decoration: underline;
 }
 
 .education__sertificate {
@@ -1444,7 +1467,6 @@ figcaption:after {
 }
 
 .job-wrap {
-  margin-bottom: 200px;
   background-image: url("../../img/pics/lamp.jpg");
   background-image: -webkit-image-set(url("../../img/pics/lamp.webp") 1x);
   background-size: cover;
@@ -1618,6 +1640,57 @@ figcaption:after {
     -webkit-transform: translate(-6px, 6px);
             transform: translate(-6px, 6px);
   }
+}
+
+.contacts-wrap {
+  background-image: url("../../img/pics/lines.jpg");
+  background-image: -webkit-image-set(url("../../img/pics/lines.webp") 1x);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contacts__column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contacts__info {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.contacts__pic {
+  width: 500px;
+  height: auto;
+}
+
+.contacts__main-item.phone:before {
+  background-image: url("../../img/svg/creativity.svg");
+}
+
+.contacts__main-item.email:before {
+  background-image: url("../../img/svg/creativity.svg");
+}
+
+.contacts__main-item.location:before {
+  background-image: url("../../img/svg/creativity.svg");
+}
+
+.contacts__main-item.birthday:before {
+  background-image: url("../../img/svg/creativity.svg");
 }
 
 @media screen and (max-width: 933px) {

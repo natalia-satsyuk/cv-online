@@ -7,9 +7,12 @@
     }
 
     &__show {
-        color: blue;
-        text-decoration: underline;
+        color: #bd7e2f;        
         cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     &__sertificate {	

@@ -1,27 +1,24 @@
 .vertical-block {
-	position: absolute;
-	width: 60px;
-	left: 0;
-	top: 0;
-    height: 100%;
-    padding-left: 12px;
-	display: flex;
-    align-items: center;
-    justify-content: center;;
+    position: absolute;
+    left: 0;
+    top: 0;
     transform: rotate(-90deg);
 
     &__text {
-        position: relative;
-        padding-left: 32px;
+        position: absolute;
+        right: 100%;
+        padding-left: 60px;
+        font-size: 18px;
+        font-weight: bold;
 
-        &:before {
+        &:after {
             content: '';
-            width: 30px;
-            height: 6px;
             position: absolute;
+            width: 58px;
             left: 0;
             bottom: 0;
-            background:#c30c7a;
+            height: 6px;
+            background: tomato;
         }
-    }
+    }    
 }
