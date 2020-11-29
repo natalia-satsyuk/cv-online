@@ -1,13 +1,15 @@
-.job-wrap {
-    background-image: url('../../img/pics/lamp.jpg');        
-    background-image: -webkit-image-set(url('../../img/pics/lamp.webp') 1x);
-    background-size: cover;
-    background-repeat: no-repeat;  
-    background-attachment: fixed; 
-
+.job-wrap {  
+    margin-top : -60px;
+    
     .title-second {
         margin-bottom: 0;
         margin-top: -12px !important;
+    }
+
+    .box-shadow-block {
+        &:hover {
+            transform: none;
+        }
     }
 }
 
@@ -27,6 +29,8 @@
         visibility: hidden;
         opacity: 0;
         transition: all 1s ease;
+        background: #fff;
+        box-shadow: 11px 11px 12px -9px #000;
     } 
     
     &__click {
@@ -124,7 +128,7 @@
   border-left: none;
   border-bottom: none;
   border-left: 2px #000 solid;
-  border-bottom: 1px #000 solid;
+  border-bottom: 3px #000 solid;
   transform: translate(18px, -18px);
   animation-duration: 2s;
   animation-iteration-count: infinite;

@@ -1,3 +1,11 @@
+.education-wrap {
+    .box-shadow-block {
+        &:hover {
+            transform: none;
+        }
+    }
+}
+
 .education {
     &__item {
         &:before {
@@ -7,7 +15,8 @@
     }
 
     &__show {
-        color: #bd7e2f;        
+        color: #121a42;
+        font-weight: 700;      
         cursor: pointer;
 
         &:hover {
@@ -16,6 +25,8 @@
     }
 
     &__sertificate {	
+        width: 500px;
+        height: auto;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -28,7 +39,9 @@
         &.open {
             display: block;
             visibility: visible;
-            opacity: 1;    
+            opacity: 1;  
+            position: fixed;
+            z-index: 11;
         }        
     
         .close {

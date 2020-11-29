@@ -1,6 +1,5 @@
 .contacts-wrap {
     background-image: url('../../img/pics/lines.jpg');
-    // image-set for FF, only jpg gets downloaded for not supporting browsers
     background-image: -webkit-image-set(url('../../img/pics/lines.webp') 1x);
     background-size: cover;
     background-repeat: no-repeat; 
@@ -12,6 +11,8 @@
 
     display: flex;
     justify-content: space-between;  
+    font-size: 16px;
+    font-weight: 500;
     
     &--grow-1 {
         flex-grow: 1;
@@ -19,38 +20,42 @@
 
     &__column {
         flex-direction: column;
+        margin-right: 30px;
     }    
 
     &__pic {
-        width: 500px;
+        width: 400px;
+        min-width: 400px;
         height: auto;
     }   
 
     &__main-item {  
+
+        &:before {
+            @extend %icon-before-list;
+            width: 20px;
+            height: 20px;
+        }
         &.phone {
-            &:before {
-                @extend %icon-before-list;
+            &:before {                
                 background-image: url('../../img/svg/call.svg');
             }  
         }  
         
         &.email {
             &:before {
-                @extend %icon-before-list;
                 background-image: url('../../img/svg/mail.svg');
             }  
         } 
 
         &.location {
             &:before {
-                @extend %icon-before-list;
                 background-image: url('../../img/svg/location.svg');
             }  
         } 
 
         &.birthday {
             &:before {
-                @extend %icon-before-list;
                 background-image: url('../../img/svg/birthday.svg');
             }  
         }  

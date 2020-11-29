@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&display=swap" rel="stylesheet"> -->
 
     <link rel="stylesheet" href="css/style.min.css"></link>
     <title>Gulp</title>
 </head>
-<body>
+<body>  
+    <div class="for-overlay"></div> 
 
     <header class='header'>
     <div class="container">
@@ -34,24 +40,24 @@
             I'm a front end developer</h1>
         <p class="title-second">Relax for a few minutes,<br>
             take a sip of coffee and look at my site</p>  
-        <a href="#inspires" class="down menu__link"></a>
+        <a href="#experience" class="down menu__link"></a>
     </div>  
 </div>
-    <div class="experience-wrap pad-block" id="experience" data-id-block="experience">
+    <div class="experience-wrap pad-block bg-gray" id="experience" data-id-block="experience">
     <div class="container container--left-pad">
         <div class="vertical-block">
             <p class="vertical-block__text">experience</p>
         </div>
 
-        <div class="box-shadow-block box-shadow-block--pad-all">
-            <h2 class="title-second">My experience in frontend-developing:</h2>
+        <div class="box-shadow-block box-shadow-block--pad-all bg-white">
+            <h2 class="title-second">My experience in frontend-developing</h2>
             <ul class="experience">
-                <li class="experience__item list-item">Hand-coded landing pages, promo-pages, email-letters, different components for sites;</li>
-                <li class="experience__item list-item">Built sites to work across browsers and device platforms (desktop, tablet, smartphone);</li>
-                <li class="experience__item list-item">Coded front-end responsive websites and pages;</li>
-                <li class="experience__item list-item">Refactored code;</li>
-                <li class="experience__item list-item">Worked with someone else’s code and plugins;</li>
-                <li class="experience__item list-item">Worked in geographically distributed teams;</li>            
+                <li class="experience__item list-item">Hand-coded landing pages, promo-pages, email-letters, different components for sites</li>
+                <li class="experience__item list-item">Built sites to work across browsers and device platforms (desktop, tablet, smartphone)</li>
+                <li class="experience__item list-item">Coded front-end responsive websites and pages</li>
+                <li class="experience__item list-item">Refactored code</li>
+                <li class="experience__item list-item">Worked with someone else’s code and plugins</li>
+                <li class="experience__item list-item">Worked in geographically distributed teams</li>            
             </ul>
         </div>        
     </div>
@@ -73,10 +79,13 @@
                 <p>Old good rock</p>
             </div>
             <div class="inspire-slider__item">
-                <p>My dog Boston</p>
+                <p>My dog Richard</p>
             </div>
             <div class="inspire-slider__item">
                 <p>Mountain hiking</p>
+            </div>
+            <div class="inspire-slider__item">
+                <p>Riding a bicycle</p>
             </div>
         </div>
     </div>
@@ -88,7 +97,7 @@
         </div>
 
         <div class="skills">
-            <div class="skills__part box-shadow-block">
+            <div class="skills__part box-shadow-block bg-gray">
                 <h2 class="title-second">Strong knowledge of</h2>
                 <ul class="skills__list">
                     <li class="skills__item list-item">HTML, CSS  (including HTML5, CSS3)</li>
@@ -100,7 +109,7 @@
                     <li class="skills__item list-item">Avocode, Zeplin, Figma, Photoshop for coder</li>       
                 </ul>
             </div>
-            <div class="skills__part box-shadow-block">
+            <div class="skills__part box-shadow-block bg-gray">
                 <h2 class="title-second">Experience with</h2>
                 <ul class="skills__list">
                     <li class="skills__item list-item">Basics of JavaScript, JQuery, Vue.js, Twig</li>
@@ -221,13 +230,13 @@
         </div>  
     </div>
 </section>
-    <div class="education-wrap pad-block" id="education" data-id-block="education">
+    <div class="education-wrap pad-block bg-gray" id="education" data-id-block="education">
     <div class="container container--left-pad">
         <div class="vertical-block">
             <p class="vertical-block__text">education</p>
         </div>
 
-        <div class="box-shadow-block box-shadow-block--pad-all">
+        <div class="box-shadow-block box-shadow-block--pad-all bg-white">
             <h2 class="title-second">Educational qualification</h2>
 
             <ul class="education">
@@ -284,46 +293,50 @@
        
     </div>
 </div>
-    <div class="job-wrap pad-block" id="jobs" data-id-block="jobs">
+    <div class="job-wrap pad-block bg-gray" id="jobs" data-id-block="jobs">
     <div class="container container--left-pad">
         <div class="vertical-block">
             <p class="vertical-block__text">jobs</p>
         </div>
-        <div class="job-helper">
-            <div class="dropdown">
-                <div class="dropdown__click" id="dropdown-btn">
-                    <h2 class="title-second">Work experience</h2>
-                    <button class="dropdown__button">
-                        <img src='img/svg/arrow.svg' alt="alt">
-                    </button>
-                </div>
-                
-                
-            </div>
-    
-            <ul class="job dropdown__block">
-                <li class="job__item list-item">2020 Freelance as frontend-developer</li>
-                <li class="job__item list-item">2017-2020 Frontend developer at LetyShops</li>
-                <li class="job__item list-item">2016-2017 Freelance as frontend-developer</li>         
-            </ul>
 
-            <div class="job__call-to-action">
-                <div class="arrow"></div>
-                <p>Click to watch</p>
+        <div class="box-shadow-block box-shadow-block--pad-all bg-white">
+            <div class="job-helper">
+                <div class="dropdown">
+                    <div class="dropdown__click" id="dropdown-btn">
+                        <h2 class="title-second">Work experience</h2>
+                        <button class="dropdown__button">
+                            <img src='img/svg/arrow.svg' alt="alt">
+                        </button>
+                    </div>
+                    
+                    
+                </div>
+        
+                <ul class="job dropdown__block">
+                    <li class="job__item list-item">2020 Freelance as frontend-developer</li>
+                    <li class="job__item list-item">2017-2020 Frontend developer at LetyShops</li>
+                    <li class="job__item list-item">2016-2017 Freelance as frontend-developer</li>         
+                </ul>
+    
+                <div class="job__call-to-action">
+                    <div class="arrow"></div>
+                    <p>Click to watch</p>
+                </div>
             </div>
-        </div>        
+        </div>
+                
     </div>
 </div>
     <div class="contacts-wrap pad-block" id="contacts" data-id-block="contacts">
     <div class="container container--left-pad">
 
         <div class="vertical-block">
-            <p class="vertical-block__text">about</p>
+            <p class="vertical-block__text">contacns</p>
         </div>        
 
         <div class="contacts">
             <div class="contacts__column contacts--grow-1">
-                <h2 class="title-second">About me</h2>
+                <h2 class="title-second">My contacts</h2>
 
                 <div class="contacts__info marg-bot-24">
                     <ul class="contacts__main">
@@ -335,9 +348,9 @@
                     <div class="contacts__social"></div>
                 </div>
 
-                <p class="marg-bot-18">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dignissimos ex illo placeat quo quaerat itaque assumenda dolor nesciunt a.</p>
+                <p class="marg-bot-18">If very briefly: I adore bicycle riding, mountain hiking and river rafting. I really love travelling - it helps to color my life.</p>
 
-                <p class="marg-bot-18">or find me at socials:</p>
+                <p class="marg-bot-18 fw-bold">Find me at socials:</p>
 
                 <div class="contacts__social">                    
                     <a class="contacts__social-item fb" href="https://www.facebook.com/nata.link.92" target="_blank">

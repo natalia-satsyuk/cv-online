@@ -1,27 +1,12 @@
 .inspire-wrap {
     position: relative;
-    height: 500px;
+    height: 460px;
     
     background-image: url('../../img/pics/lines-vertical.jpg');        
     background-image: -webkit-image-set(url('../../img/pics/lines-vertical.webp') 1x);
     background-size: cover;
     background-repeat: no-repeat; 
-    background-attachment: fixed; 
-    
-    // &:before {
-    //     content: '';
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 500px;
-    //     background-image: url('../../img/pics/lights.jpg');        
-    //     background-image: -webkit-image-set(url('../../img/pics/lights.webp') 1x);
-    //     background-size: cover;
-    //     background-repeat: no-repeat; 
-    //     background-attachment: fixed; 
-    //     filter: brightness(0.5); 
-    // }
+    background-attachment: fixed;     
 }
 
 .inspire-slider {

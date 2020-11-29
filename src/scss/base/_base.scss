@@ -1,11 +1,3 @@
-@font-face {
-	font-family: "CeraPRO";
-	src: url("https://static.letyshops.com/sites/default/files/external_static/cdn/fonts/cera-pro/CeraPRO-BlackItalic.woff2") format("woff2"),
-	   url("https://static.letyshops.com/sites/default/files/external_static/cdn/fonts/cera-pro/CeraPRO-BlackItalic.woff") format("woff");
-	font-weight: 900;
-	font-style: italic;
-  }
-
 html {
 	@include fontSize($font-size-base);
 }
@@ -39,15 +31,19 @@ body {
 	}
 }
 
-.overlay {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	// overflow: hidden;
-	background: rgba(0, 0, 0, .2);
+.overlay {   
+	position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+
 }
+
+
+
 
 p {
 	margin-top: 0;
@@ -186,13 +182,17 @@ ol:not([class]) {
 	padding: 60px 0;
 }
 
+.fw-bold {
+	font-weight: $weight-bold;;
+} 
+
 .box-shadow-block {
 	position: relative;
 	transform: translateY(0);
 	border-radius: 2px;
 	// box-shadow: 2.5px 4.33px 30px 0px rgb(0, 0, 0);
 	box-shadow: 0px 0px 17px -3px #000;
-	transition: transform .3s ease;
+	transition: transform .3s ease;	
 
 	&:hover {
 		transform: translateY(-20px);
@@ -262,3 +262,12 @@ $values: (0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60);
 	flex-direction: column;
 	justify-content: center;
 }
+
+.bg-gray {
+	background: #eaeaea;
+}
+
+.bg-white {
+	background: #fff;
+}
+

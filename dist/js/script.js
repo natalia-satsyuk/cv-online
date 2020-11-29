@@ -70,45 +70,45 @@ findVideos();
 $(document).ready(function(){
 	$('.inspire-slider').slick({
 		infinite: true,
+		autoplay: true,
   		slidesToShow: 3,
   		slidesToScroll: 1	    
 	});
 });
-(function(){
-	let showPopup = document.querySelector('.education__show');
-	let sertificate = document.querySelector('.education__sertificate');
-	let close = document.querySelector('.close');	
-	let body = document.querySelector('body');	
-
-	showPopup.onclick = function () { 
-		sertificate.classList.add('open');
-		body.classList.add('overlay');
-	}
-
-	close.onclick = function () {
-		sertificate.classList.remove('open');
-		body.classList.remove('overlay');
-	}	
-
-	
-})()
-
 // (function(){
+// 	let showPopup = document.querySelector('.education__show');
+// 	let sertificate = document.querySelector('.education__sertificate');
+// 	let close = document.querySelector('.close');	
+// 	let body = document.querySelector('.for-overlay');	
 
-//     let btnContainer = document.querySelector(".menu");
+// 	showPopup.onclick = function () { 
+// 		sertificate.classList.add('open');
+// 		body.classList.add('overlay');
+// 	}
 
-
-//     let btns = btnContainer.querySelector(".menu__item");
-    
-    
-//     for (let i = 0; i < btns.length; i++) {
-//       btns[i].addEventListener("click", function() {
-//         let current = document.querySelector(".active");
-//         current[0].className = current[0].className.replace(" active", "");
-//         this.className += " active";
-//       });
-//     }
+// 	close.onclick = function () {
+// 		sertificate.classList.remove('open');
+// 		body.classList.remove('overlay');
+// 	}	
+	
 // })()
+
+(function(){
+	let showPopup = document.querySelectorAll('.education__show');
+	let sertificate = document.querySelector('.education__sertificate');
+	let close = document.querySelector('.close');  
+  
+	showPopup.forEach((item) => {
+	  item.onclick = function () { 
+	  sertificate.classList.add('open');
+	}
+	})
+  
+	close.onclick = function () {
+	  sertificate.classList.remove('open');
+	}  
+	
+  })()
 function dropDown(){
 	let jobList = document.querySelector('.dropdown');	
 	let drop = document.querySelector('#dropdown-btn');	
