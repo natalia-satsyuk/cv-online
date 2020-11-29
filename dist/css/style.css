@@ -438,8 +438,8 @@ ol:not([class]) li {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
 }
 
 .padding-top-0 {
@@ -1203,7 +1203,7 @@ template {
 }
 
 .experience__item:before {
-  background-image: url("../../img/svg/creativity.svg");
+  background-image: url("../../img/svg/code.svg");
 }
 
 .vertical-block {
@@ -1252,7 +1252,7 @@ template {
 }
 
 .skills__item:before {
-  background-image: url("../../img/svg/thought.svg");
+  background-image: url("../../img/svg/skills.svg");
 }
 
 .inspire-wrap {
@@ -1318,6 +1318,9 @@ template {
 .projects__item:hover {
   background: -o-linear-gradient(135deg, #f3cf3f 0%, #f33f58 100%);
   background: linear-gradient(-45deg, #f3cf3f 0%, #f33f58 100%);
+  -webkit-transform: none !important;
+      -ms-transform: none !important;
+          transform: none !important;
 }
 
 .projects__item:hover img {
@@ -1413,7 +1416,7 @@ figcaption:after {
 }
 
 .education__item:before {
-  background-image: url("../../img/svg/thought.svg");
+  background-image: url("../../img/svg/graduation-hat.svg");
 }
 
 .education__show {
@@ -1659,17 +1662,17 @@ figcaption:after {
           justify-content: space-between;
 }
 
+.contacts--grow-1 {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 .contacts__column {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.contacts__info {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
 }
 
 .contacts__pic {
@@ -1678,19 +1681,43 @@ figcaption:after {
 }
 
 .contacts__main-item.phone:before {
-  background-image: url("../../img/svg/creativity.svg");
+  background-image: url("../../img/svg/call.svg");
 }
 
 .contacts__main-item.email:before {
-  background-image: url("../../img/svg/creativity.svg");
+  background-image: url("../../img/svg/mail.svg");
 }
 
 .contacts__main-item.location:before {
-  background-image: url("../../img/svg/creativity.svg");
+  background-image: url("../../img/svg/location.svg");
 }
 
 .contacts__main-item.birthday:before {
-  background-image: url("../../img/svg/creativity.svg");
+  background-image: url("../../img/svg/birthday.svg");
+}
+
+.contacts__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts__social-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.contacts__social-item + .contacts__social-item {
+  margin-left: 18px;
 }
 
 @media screen and (max-width: 933px) {

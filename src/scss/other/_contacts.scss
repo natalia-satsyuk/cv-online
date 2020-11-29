@@ -8,16 +8,18 @@
 }
 
 .contacts {
+    $root: &;
+
     display: flex;
-    justify-content: space-between;   
+    justify-content: space-between;  
+    
+    &--grow-1 {
+        flex-grow: 1;
+    }
 
     &__column {
         flex-direction: column;
-    }
-
-    &__info {
-        flex-grow: 1;
-    }
+    }    
 
     &__pic {
         width: 500px;
@@ -28,31 +30,46 @@
         &.phone {
             &:before {
                 @extend %icon-before-list;
-                background-image: url('../../img/svg/creativity.svg');
+                background-image: url('../../img/svg/call.svg');
             }  
         }  
         
         &.email {
             &:before {
                 @extend %icon-before-list;
-                background-image: url('../../img/svg/creativity.svg');
+                background-image: url('../../img/svg/mail.svg');
             }  
         } 
 
         &.location {
             &:before {
                 @extend %icon-before-list;
-                background-image: url('../../img/svg/creativity.svg');
+                background-image: url('../../img/svg/location.svg');
             }  
         } 
 
         &.birthday {
             &:before {
                 @extend %icon-before-list;
-                background-image: url('../../img/svg/creativity.svg');
+                background-image: url('../../img/svg/birthday.svg');
             }  
-        } 
-            
+        }             
+    }
+
+    &__social {
+        display: flex;
+    }
+
+    &__social-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;         
+    }
+
+    &__social-item + #{$root}__social-item {
+        margin-left: 18px;
     }
 }
 
