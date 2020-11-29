@@ -1,5 +1,3 @@
-/* Header */
-
 .header {
     position: fixed;
     top: 0;
@@ -7,30 +5,26 @@
     width: 100%;
     background: #e2e3e7;
     z-index: 10;
-    opacity: .8;
+    opacity: .9;
 }
-
-/* Menu */
-
 .menu {
-    
-    height: 42px;
+    $root: &;
+
     display: flex;
     align-items: center;
+
+    &__link {
+        height: 42px;
+        display: flex;   
+        align-items: center; 
+        text-decoration: none;
+        color: black;
+        padding: 0 16px;
+
+        &:hover,
+        &.active {
+            outline: none;
+            background-color:#97a79b;
+        }
+    }
 }
-
-/* Item */
-
-.menu__link {
-    display: block;    
-    text-decoration: none;
-    margin: 0 12px;
-    color: black;
-}
-
-// .menu__item:hover,
-// .menu__item:focus {
-//     outline: none;
-//     background-color: tomato;
-//     color: white;
-// }

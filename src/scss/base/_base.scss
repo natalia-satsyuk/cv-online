@@ -51,7 +51,7 @@ body {
 
 p {
 	margin-top: 0;
-	margin-bottom: $base-margin;
+	margin-bottom: 0;
 
 	@include until($mobile) {
 		margin-bottom: 12px;
@@ -245,7 +245,7 @@ $values: (0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60);
 
 .title-main {
 	font-size: 50px;
-	margin-bottom: 32px;
+	margin-bottom: 62px;
 }	
 
 .title-second {
@@ -255,18 +255,10 @@ $values: (0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60);
 	&--invert {
 		color: #fff;
 	}
+}
 
-	// &--background {
-	// 	height: 100px;
-	// 	background-color: #0a0a0a;
-	// 	display: flex;
-	// 	align-items: flex-end;
-	// 	line-height: 1;
-	// 	color: #fff;
-	// 	padding: 0 24px;
-	// }
-
-	// &--inline {
-	// 	display: inline-flex;
-	// }
+.vertical-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }

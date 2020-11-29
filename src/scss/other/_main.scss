@@ -1,10 +1,37 @@
 .main {
     padding-top: 66px;
-    height: 600px;
+    height: 100vh;
+    min-height: 680px;
 
     background-image: url('../../img/pics/lamp.jpg');
     // image-set for FF, only jpg gets downloaded for not supporting browsers
     background-image: -webkit-image-set(url('../../img/pics/lamp.webp') 1x);
     background-size: cover;
     background-repeat: no-repeat;  
+
+    .down {
+        position: relative;
+        display: flex;
+        margin: auto;
+        width: 90px;
+        height: 70px;        
+        background-color: rgba(255,255,255,.5);
+        box-shadow: none;
+        transition: all .3s ease;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-90deg);
+            width: 28px;
+            height: 28px;
+            background:  url('../../img/svg/arrow-left.svg') center, no-repeat;
+        }
+
+        &:hover {
+            box-shadow: 2px 3px 7px rgba(0,0,0,.3);
+        }
+    }
 }

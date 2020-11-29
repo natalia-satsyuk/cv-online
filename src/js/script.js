@@ -3,3 +3,5 @@
 @@include('slick.js')
 @@include('popup.js')
 @@include('dropdown.js')
+@@include('smooth-scroll.js')
+

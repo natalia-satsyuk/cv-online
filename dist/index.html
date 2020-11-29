@@ -14,23 +14,30 @@
     <div class="container">
         <nav class="navigation">
             <ul class="menu">
-                <li class="menu__item"><a href="#" class="menu__link">a</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">bb</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">cc</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">dd</a></li>
+                <li class="menu__item"><a href="#main" class="menu__link" data-id-nav="main">Main</a></li>
+                <li class="menu__item"><a href="#experience" class="menu__link" data-id-nav="experience">Experience</a></li>
+                <li class="menu__item"><a href="#inspires" class="menu__link" data-id-nav="inspires">Inspires</a></li>
+                <li class="menu__item"><a href="#skills" class="menu__link" data-id-nav="skills">Skills</a></li>
+                <li class="menu__item"><a href="#projects" class="menu__link" data-id-nav="projects">Projects</a></li>
+                <li class="menu__item"><a href="#education" class="menu__link" data-id-nav="education">Education</a></li>
+                <li class="menu__item"><a href="#jobs" class="menu__link" data-id-nav="jobs">Jobs</a></li>
+                <li class="menu__item"><a href="#contacts" class="menu__link" data-id-nav="contacts">Contacts</a></li>
             </ul>
         </nav>
     </div>  
      
 </header>
-    <div class="main">
-    <div class="container">
-        <h1 class="title-main color-white">Lorem</h1>
-        <p class="color-white">Lorem</p>
-        <button class="down">Lorem</button>
+    <div class="main vertical-center" id="main">
+    <div class="container">        
+        <h1 class ="title-main">Hi guys<br>
+            My name is Nataliya<br>
+            I'm a front end developer</h1>
+        <p class="title-second">Relax for a few minutes,<br>
+            take a sip of coffee and look at my site</p>  
+        <a href="#inspires" class="down menu__link"></a>
     </div>  
 </div>
-    <div class="experience-wrap pad-block">
+    <div class="experience-wrap pad-block" id="experience" data-id-block="experience">
     <div class="container container--left-pad">
         <div class="vertical-block">
             <p class="vertical-block__text">experience</p>
@@ -51,7 +58,7 @@
 </div>
 
 
-    <div class="inspire-wrap pad-block">
+    <div class="inspire-wrap pad-block" id="inspires" data-id-block="inspires">
     <div class="container">
         <h2 class="title-second title-second--invert">It inspires me</h2>
 
@@ -74,7 +81,7 @@
         </div>
     </div>
 </div>
-    <div class="skills-wrap pad-block">
+    <div class="skills-wrap pad-block" id="skills" data-id-block="skills">
     <div class="container container--left-pad">
         <div class="vertical-block">
             <p class="vertical-block__text">skills</p>
@@ -107,7 +114,7 @@
 </div>
 
 
-    <section class="projects-wrap pad-block" id="projects">
+    <section class="projects-wrap pad-block" id="projects" data-id-block="projects">
     <div class="container container--left-pad">
         <div class="vertical-block">
             <p class="vertical-block__text">projects</p>
@@ -214,7 +221,7 @@
         </div>  
     </div>
 </section>
-    <div class="education-wrap pad-block">
+    <div class="education-wrap pad-block" id="education" data-id-block="education">
     <div class="container container--left-pad">
         <div class="vertical-block">
             <p class="vertical-block__text">education</p>
@@ -277,7 +284,7 @@
        
     </div>
 </div>
-    <div class="job-wrap pad-block">
+    <div class="job-wrap pad-block" id="jobs" data-id-block="jobs">
     <div class="container container--left-pad">
         <div class="vertical-block">
             <p class="vertical-block__text">jobs</p>
@@ -307,7 +314,7 @@
         </div>        
     </div>
 </div>
-    <div class="contacts-wrap pad-block">
+    <div class="contacts-wrap pad-block" id="contacts" data-id-block="contacts">
     <div class="container container--left-pad">
 
         <div class="vertical-block">
@@ -320,29 +327,29 @@
 
                 <div class="contacts__info marg-bot-24">
                     <ul class="contacts__main">
-                        <li class="contacts__main-item list-item phone">+380(97)504-8008</li>
-                        <li class="contacts__main-item list-item email">natalia.satsyuk@gmail.com</li>
+                        <li class="contacts__main-item list-item phone"><a href="tel:380-97-504-8008">+380(97)504-8008</a></li>
+                        <li class="contacts__main-item list-item email"><a mailto="natalia.satsyuk@gmail.com">natalia.satsyuk@gmail.com</a></li>
                         <li class="contacts__main-item list-item location">Vinnytsia, Ukraine</li>
                         <li class="contacts__main-item list-item birthday">born in 19.04.1985</li>                               
                     </ul>
                     <div class="contacts__social"></div>
                 </div>
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dignissimos ex illo placeat quo quaerat itaque assumenda dolor nesciunt a.</p>
+                <p class="marg-bot-18">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dignissimos ex illo placeat quo quaerat itaque assumenda dolor nesciunt a.</p>
 
-                <p>or find me at socials:</p>
+                <p class="marg-bot-18">or find me at socials:</p>
 
                 <div class="contacts__social">                    
-                    <a class="contacts__social-item fb" href="">
+                    <a class="contacts__social-item fb" href="https://www.facebook.com/nata.link.92" target="_blank">
                         <img src='img/svg/fb.svg' alt="fb">
                     </a>
-                    <a class="contacts__social-item linkedin" href="">
+                    <a class="contacts__social-item linkedin" href="https://www.linkedin.com/in/nataliya-satsyuk-381077118" target="_blank">
                         <img src='img/svg/linkedin.svg' alt="linkedin">
                     </a>   
-                    <a class="contacts__social-item github" href="">
+                    <a class="contacts__social-item github" href="https://github.com/natalia-satsyuk/" target="_blank">
                         <img src='img/svg/github.svg' alt="github">
                     </a>               
-                    <a class="contacts__social-item instagram" href="">
+                    <a class="contacts__social-item instagram" href="https://www.instagram.com/nataliyasatsyuk/" target="_blank">
                         <img src='img/svg/instagram.svg' alt="instagram">
                     </a>
                 </div>
@@ -359,7 +366,11 @@
         </div>
     </div>
 </div> 
-
+    <div class="footer">
+    <div class="container">
+        <p>Developed and designed by Nataliya Satsyuk</p>
+    </div>
+</div>
 
     <!-- <main class='container'>      
        
