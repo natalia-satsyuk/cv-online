@@ -1,3 +1,7 @@
+---
+permalink: /index.html
+---
+
 Version 1.0.0
 
 # gulp-starter
