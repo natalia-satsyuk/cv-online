@@ -1,0 +1,59 @@
+.inspire-wrap {
+    position: relative;
+    height: 386px;
+    
+    background-image: url('../../img/pics/lines-vertical.jpg');        
+    background-image: -webkit-image-set(url('../../img/pics/lines-vertical.webp') 1x);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;   
+    
+    @include desktop {
+		height: 334px;
+    }
+    
+    @include tablet {
+        height: 290px;
+    }
+
+    @include mobile {        
+        height: 264px;
+    }
+}
+
+.inspire-slider {
+    margin-top: 80px;
+    width: 96%;
+    margin: 0 auto;
+
+    @include desktop {
+		margin-top: 70px;
+	}
+
+    @include tablet {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    &__item {   
+        p {
+            height: 100px;
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;;
+            font-size: 20px;
+            background-color: rgba(245,239,224,.8);
+            border-radius: 2px;
+
+            @include desktop {
+                font-size: 16px;
+            }
+
+            @include tablet {
+                width: 90%;
+            }
+        } 
+    }
+}

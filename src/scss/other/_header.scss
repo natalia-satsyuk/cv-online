@@ -1,33 +1,96 @@
-/* Header */
-
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: #000;
+    background: #e2e3e7;
+    z-index: 10;
+    opacity: .9;
 }
-
-/* Menu */
-
 .menu {
-    
-    height: 42px;
+    $root: &;
+
     display: flex;
     align-items: center;
+
+    @include tablet {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-100%);
+        transition: all .3s ease; 
+    }
+
+    &__link {
+        height: 42px;
+        display: flex;   
+        align-items: center; 
+        text-decoration: none;
+        color: black;
+        padding: 0 16px;
+
+        &:hover,
+        &.active {
+            outline: none;
+            background-color:#97a79b;
+        }
+    }
 }
 
-/* Item */
-
-.menu__link {
-    display: block;    
-    text-decoration: none;
-    margin: 0 12px;
+.active {
+    outline: none;
+    background-color:#97a79b;
 }
 
-// .menu__item:hover,
-// .menu__item:focus {
-//     outline: none;
-//     background-color: tomato;
-//     color: white;
-// }
+.menu-icon {
+    display: none;
+
+    @include tablet {
+        display: inline-flex;
+        width: 44px;
+        height: auto;
+        position: relative;
+        z-index: 2;
+    }
+
+    @include mobile {
+        width: 38px;
+    }
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+        padding: 4px 0;
+    }
+
+    &.open {
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            opacity: 1;
+            visibility: visible;
+            position: absolute;
+            width: 300px;
+            height: auto;
+            top: 40px;
+            left: 0;
+            padding-left: 12px;
+            background: #e2e3e7; 
+            
+            transform: translateX(0);
+            transition: all .3s ease; 
+
+            @include mobile {
+                top: 36px;
+            }
+            
+            &__link {
+                height: 34px;
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.education-wrap {    
+    position: relative;
+    z-index: 3; 
+}
+
+.education {
+    &__item {
+        &:before {
+            @extend %icon-before-list;
+            background-image: url('../../img/svg/graduation-hat.svg');
+        }
+    }
+
+    &__show {
+        color: #121a42;
+        font-weight: 700;      
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__sertificate {	  
+        visibility: hidden;
+        opacity: 0;
+
+        display:none;
+        position:fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    
+        transition: 300ms;
+    
+        &.open {
+            display: block;
+            visibility: visible;
+            opacity: 1;             
+            transition: 300ms;
+            z-index: 2;
+        }   
+
+        .for-overlay {
+            background: rgba(0,0,0,0.4);
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        .main-to-show {
+            position:relative;
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @include desktop {
+                top: 40px;
+                width: 90vw;
+                transform: translate(-50%, 0);
+            }
+        }
+    
+        .close {
+            position: absolute;
+            padding: 0;
+            top: 26px;
+            right: 26px;
+            width: 22px;
+            height: 22px;
+            opacity: 1;
+            transition: all .2s ease;
+            cursor: pointer;
+
+            @include tablet {
+                top: 20px;
+                right: 20px;
+                width: 18px;
+                height: 18px;
+            }
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+           
+            &:hover {
+              opacity: .8;
+            }
+        }            
+    }
+}

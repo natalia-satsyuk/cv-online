@@ -1,0 +1,28 @@
+.vertical-block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotate(-90deg);
+
+    &__text {
+        position: absolute;
+        right: 100%;
+        padding-left: 60px;
+        font-size: 18px;
+        font-weight: bold;
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 58px;
+            left: 0;
+            bottom: 0;
+            height: 6px;
+            background: $line-decor;
+        }
+    } 
+    
+    @include widescreen {
+        display: none;
+    }
+}

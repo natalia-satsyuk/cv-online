@@ -3,130 +3,389 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/pics/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.min.css"></link>
-    <title>Gulp</title>
+    <title>Nataliya Satsyuk</title>
 </head>
-<body>
+<body>  
+    <div class="for-overlay"></div> 
 
     <header class='header'>
     <div class="container">
         <nav class="navigation">
-            <ul class="menu">
-                <li class="menu__item"><a href="#" class="menu__link">a</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">bb</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">cc</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">dd</a></li>
+            <button class="menu-icon">
+                <img src='img/svg/menu.svg' alt="menu">
+            </button>
+            <ul class="menu" id="mainNav">
+                <li class="menu__item"><a href="#main" class="menu__link active">Home</a></li>
+                <li class="menu__item"><a href="#experience" class="menu__link" data-id-nav="experience">Experience</a></li>
+                <li class="menu__item"><a href="#inspires" class="menu__link" data-id-nav="inspires">Inspires</a></li>
+                <li class="menu__item"><a href="#skills" class="menu__link" data-id-nav="skills">Skills</a></li>
+                <li class="menu__item"><a href="#projects" class="menu__link" data-id-nav="projects">Projects</a></li>
+                <li class="menu__item"><a href="#education" class="menu__link" data-id-nav="education">Education</a></li>
+                <li class="menu__item"><a href="#jobs" class="menu__link">Jobs</a></li>
+                <li class="menu__item"><a href="#contacts" class="menu__link" data-id-nav="contacts">Contacts</a></li>
             </ul>
         </nav>
-    </div>  
-     
+    </div>       
 </header>
-    <main class='container'>
-
-        <p style="font-family: Lato; font-weight: 800;">Lorem ipsum dolor sit amet.</p>
-        <p style="font-family: Lato; font-weight: 400;">Lorem ipsum dolor sit amet.</p>
-        <p style="font-family: Lato; font-weight: 300;">Lorem ipsum dolor sit amet.</p>
-        <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    <div class="main vertical-center" id="main">
+    <div class="container">        
+        <h1 class ="title-main">Hi guys<br>
+            My name is Nataliya<br>
+            I'm a front end developer</h1>
+        <p class="title-second">Relax for a few minutes,<br>
+            take a sip of coffee and look at my site</p>  
+        <a href="#experience" class="down menu__link"></a>
+    </div>  
+</div>
+    <div class="experience-wrap pad-block pad-block--pad-0 bg-gray" id="experience">
+    <div class="container container--left-pad">
+        <div class="vertical-block">
+            <p class="vertical-block__text">experience</p>
         </div>
-       
-        <picture class="img-poly">
-			<source media="(min-width: 728px)" srcset="img/pics/dd.webp" type="image/webp">
-			<source media="(min-width: 728px)" srcset="img/pics/dd.jpg">
 
-		    <source media="(min-width: 320px)" srcset="img/pics/dd.webp" type="image/webp">
-		    <source media="(min-width: 320px)" srcset="img/pics/dd.jpg">
-
-		    <img width="200" src='img/pics/dd.jpg' alt="alt">
-        </picture>
-        
-        <div class="share-wrap">
-    <button class="pointer share-action">Share it!</button>
-                    
-    <div class="share share--popup"> 
-        
-        <div class="bg-helper"> <!-- for ie box-shadow-tail --> 
-            <div class="social-share" role="tablist" aria-label="sharing">							
-                <a href="#" class="social-share__item" role="tab" aria-label="facebook sharing">
-                    <img class="social-share__ico social-share__ico--fb" src="img/svg/fb.svg" alt="fb-share">
-                </a>
-                <a href="#" class="social-share__item" role="tab" aria-label="twitter sharing">
-                    <img class="social-share__ico social-share__ico--twitter" src="img/svg/github.svg" alt="github-share">
-                </a>
-                <a href="#" class="social-share__item" role="tab" aria-label="pinterest sharing">
-                    <img class="social-share__ico social-share__ico--pinterest" src="img/svg/instagram.svg" alt="instagram-share">
-                </a>
-                <a href="#" class="social-share__item" role="tab" aria-label="youtube sharing">
-                    <img class="social-share__ico social-share__ico--youtube" src="img/svg/linkedin.svg" alt="linkedin-share">
-                </a>							
-            </div>	
-            <button class="close" aria-label="close sharing">
-                <img src="img/svg-icon/close.svg" alt="close-share">
-            </button>
-        </div>						
-    </div>						
+        <div class="box-shadow-block box-shadow-block--pad-all wide-mobile bg-white">
+            <h2 class="title-second">My experience in frontend-developing</h2>
+            <ul class="experience">
+                <li class="experience__item list-item">Hand-coded landing pages, promo-pages, email-letters, different components for sites</li>
+                <li class="experience__item list-item">Built sites to work across browsers and device platforms (desktop, tablet, smartphone)</li>
+                <li class="experience__item list-item">Coded front-end responsive websites and pages</li>
+                <li class="experience__item list-item">Refactored code</li>
+                <li class="experience__item list-item">Worked with someone else’s code and plugins</li>
+                <li class="experience__item list-item">Worked in geographically distributed teams</li>            
+            </ul>
+        </div>        
+    </div>
 </div>
-        <div class="variants" role="tablist" tabindex="0" aria-label="colors">
-    <label class="variants__item variants__item--blue" aria-label="color blue">			
-        <input class="variants__item-action" type="radio" name="variants__item-color">
-        <span class="indicator"></span>
-    </label>
+
+
+    <div class="inspire-wrap pad-block" id="inspires">
+    <div class="container">
+        <h2 class="title-second title-second--invert">It inspires me</h2>
+
+        <div class="inspire-slider">
+            <div class="inspire-slider__item">
+                <p>Gallons of tea</p>
+            </div>
+            <div class="inspire-slider__item">
+                <p>Cozy arm-chair</p>
+            </div>
+            <div class="inspire-slider__item">
+                <p>Old good rock</p>
+            </div>
+            <div class="inspire-slider__item">
+                <p>My dog Richard</p>
+            </div>
+            <div class="inspire-slider__item">
+                <p>Mountain hiking</p>
+            </div>
+            <div class="inspire-slider__item">
+                <p>Bicycle riding</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="skills-wrap pad-block pad-block--pad-0" id="skills">
+    <div class="container container--left-pad">
+        <div class="vertical-block">
+            <p class="vertical-block__text">skills</p>
+        </div>
+
+        <div class="skills wide-mobile">
+            <div class="skills__part box-shadow-block card-hover bg-gray">
+                <h2 class="title-second">Strong knowledge of</h2>
+                <ul class="skills__list">
+                    <li class="skills__item list-item">HTML, CSS  (including HTML5, CSS3)</li>
+                    <li class="skills__item list-item">SСSS</li>
+                    <li class="skills__item list-item">BEM</li>
+                    <li class="skills__item list-item">Adaptive and responsive design approach</li>
+                    <li class="skills__item list-item">Cross-browser/platform issues</li>
+                    <li class="skills__item list-item">GIT</li>     
+                    <li class="skills__item list-item">Avocode, Zeplin, Figma, Photoshop for coder</li>       
+                </ul>
+            </div>
+            <div class="skills__part box-shadow-block card-hover bg-gray">
+                <h2 class="title-second">Experience with</h2>
+                <ul class="skills__list">
+                    <li class="skills__item list-item">Basics of JavaScript, JQuery, Vue.js, Twig</li>
+                    <li class="skills__item list-item">Gulp, yarn</li>
+                    <li class="skills__item list-item">Bootstrap, Bulma</li>
+                    <li class="skills__item list-item">Tailwind</li>                               
+                </ul>
+            </div>
+        </div>        
+    </div>
+</div>
+
+
+    <section class="projects-wrap pad-block" id="projects">
+    <div class="container container--left-pad">
+        <div class="vertical-block">
+            <p class="vertical-block__text">projects</p>
+        </div>
+        
+         <h2 class="title-second">Some of my projects</h1>
+        
+        <div class="projects">
+            <figure class="projects__item box-shadow-block">
+                <picture class="img-poly projects__img">
+                    <source srcset="img/pics/home.webp" type="image/webp">
+                    <source srcset="img/pics/home.jpg">
+        
+                    <img class="projects__img" src='img/pics/home.jpg' alt="home">
+                </picture>
+                <figcaption>
+                    <p>Home stuff</p>
+                    <a href="https://natalia-satsyuk.github.io/Home/" target="_blank"></a>
+                </figcaption>
+            </figure> 
+
+            <figure class="projects__item box-shadow-block">
+                <picture class="img-poly projects__img">
+                    <source srcset="img/pics/glasses.webp" type="image/webp">
+                    <source srcset="img/pics/glasses.jpg">
+                
+                    <img class="projects__img" src='img/pics/glasses.jpg' alt="glasses">
+                </picture>
+                <figcaption>
+                    <p>Glasses</p>
+                    <a href="https://natalia-satsyuk.github.io/glasses/" target="_blank"></a>
+                </figcaption>
+            </figure>                
+                        
+            <figure class="projects__item box-shadow-block">
+                <picture class="img-poly projects__img">
+                    <source srcset="img/pics/window.webp" type="image/webp">
+                    <source srcset="img/pics/window.jpg">
+        
+                    <img class="projects__img" src='img/pics/window.jpg' alt="windows">
+                </picture>
+                <figcaption>
+                    <p>Windows</p>
+                    <a href="https://natalia-satsyuk.github.io/lviv-window/" target="_blank"></a>
+                </figcaption>
+            </figure>                
+                        
+            <figure class="projects__item box-shadow-block">
+                <picture class="img-poly projects__img">
+                    <source srcset="img/pics/spare-parts.webp" type="image/webp">
+                    <source srcset="img/pics/spare-parts.jpg">
+        
+                    <img class="projects__img" src='img/pics/spare-parts.jpg' alt="spare parts">
+                </picture>
+                <figcaption>
+                    <p>Spare parts</p>
+                    <a href="https://natalia-satsyuk.github.io/resurs/" target="_blank"></a>
+                </figcaption>
+            </figure>                
+        
+            <figure class="projects__item box-shadow-block">
+                <picture class="img-poly projects__img">
+                    <source srcset="img/pics/mountain.webp" type="image/webp">
+                    <source srcset="img/pics/mountain.jpg">
+        
+                    <img class="projects__img" src='img/pics/mountain.jpg' alt="mountain">
+                </picture>
+                <figcaption>
+                    <p>Mountain</p>
+                    <a href="https://natalia-satsyuk.github.io/Mountain-landing/" target="_blank"></a>
+                </figcaption>
+            </figure>                
+                        
+            <figure class="projects__item box-shadow-block">
+                <picture class="img-poly projects__img">
+                    <source srcset="img/pics/studio.webp" type="image/webp">
+                    <source srcset="img/pics/studio.jpg">
+        
+                    <img class="projects__img" src='img/pics/studio.jpg' alt="studio">
+                </picture>
+                <figcaption>
+                    <p>Smart Agency</p>
+                    <a href="https://natalia-satsyuk.github.io/Smart-Agency/" target="_blank"></a>
+                </figcaption>
+            </figure>  
+        </div>  
+    </div>
+</section>
+    <div class="education-wrap pad-block pad-block--pad-0 bg-gray" id="education">
+    <div class="container container--left-pad">
+        <div class="vertical-block">
+            <p class="vertical-block__text">education</p>
+        </div>
+
+        <div class="box-shadow-block box-shadow-block--pad-all wide-mobile bg-white">
+            <h2 class="title-second">Educational qualification</h2>
+
+            <ul class="education">
+                <li class="education__item list-item">2020 Coursera - University of California, Davis "Search Engine Optimization Fundamentals" 
+                    <span class="education__show">(watch sertificate)</span> 
+
+                    <div class="education__sertificate">                          
+                        <div class="for-overlay">
+                            <div class='main-to-show'>
+                                <picture class="img-poly">
+                                    <source srcset="img/pics/sertificate-seo.webp" type="image/webp">
+                                    <source srcset="img/pics/sertificate-seo.jpg">      
+                        
+                                    <img src='img/pics/sertificate-seo.jpg' alt="seo sertificate">
+                                </picture>
+                
+                                <button class="close" aria-label="close">
+                                    <img src="img/svg/close.svg" alt="close">
+                                </button>
+                            </div>
+                        </div>                                 
+                    </div>                             
+                </li>
+
+                <li class="education__item list-item">2020 Coursera - University of California, Irvine  "Time Management for Personal &amp; Professional Productivity" 
+                    <span class="education__show">(watch sertificate)</span> 
+
+                    <div class="education__sertificate">                          
+                        <div class="for-overlay">
+                            <div class='main-to-show'>
+                                <picture class="img-poly">
+                                    <source srcset="img/pics/sertificate-tm.webp" type="image/webp">
+                                    <source srcset="img/pics/sertificate-tm.jpg">      
+                        
+                                    <img src='img/pics/sertificate-tm.jpg' alt="time-management sertificate">
+                                </picture>
+                
+                                <button class="close" aria-label="close">
+                                    <img src="img/svg/close.svg" alt="close">
+                                </button>
+                            </div>
+                        </div>                                 
+                    </div>                             
+                </li>
+
+                <li class="education__item list-item">2016 online-course "Ninja-frontend” from "ExNation" 
+                    <span class="education__show">(watch sertificate)</span> 
+
+                    <div class="education__sertificate">                          
+                        <div class="for-overlay">
+                            <div class='main-to-show'>
+                                <picture class="img-poly">
+                                    <source srcset="img/pics/sertificate-nf.webp" type="image/webp">
+                                    <source srcset="img/pics/sertificate-nf.jpg">      
+                        
+                                    <img src='img/pics/sertificate-nf.jpg' alt="ninja-frontend sertificate">
+                                </picture>
+                
+                                <button class="close" aria-label="close">
+                                    <img src="img/svg/close.svg" alt="close">
+                                </button>
+                            </div>
+                        </div>                                 
+                    </div>                             
+                </li>
+
+                <li class="education__item list-item">2016 VNPU JavaScript courses</li>
+                <li class="education__item list-item">2016 VNPU HTML, CSS, Web-design courses</li>      
+            </ul>                       
+        </div>       
+    </div>
+</div>
+    <div class="job-wrap pad-block pad-block--pad-0 bg-gray" id="jobs">
+    <div class="container container--left-pad">
+        <div class="vertical-block">
+            <p class="vertical-block__text">jobs</p>
+        </div>
+
+        <div class="box-shadow-block box-shadow-block--pad-all wide-mobile bg-white">
+            <div class="job-helper">
+                <div class="dropdown">
+                    <div class="dropdown__click" id="dropdown-btn">
+                        <h2 class="title-second">Work experience</h2>
+                        <button class="dropdown__button">
+                            <img src='img/svg/arrow.svg' alt="arrow">
+                        </button>
+                    </div>
+                </div>
+        
+                <ul class="job dropdown__block">
+                    <li class="job__item list-item">2020 Freelance as frontend-developer</li>
+                    <li class="job__item list-item">2017-2020 Frontend developer at LetyShops</li>
+                    <li class="job__item list-item">2016-2017 Freelance as frontend-developer</li>         
+                </ul>
     
-    <label class="variants__item variants__item--green" aria-label="color green">		
-        <input class="variants__item-action" type="radio" name="variants__item-color">
-        <span class="indicator"></span>
-    </label>
-
-    <label class="variants__item variants__item--pink" aria-label="color pink">			
-        <input class="variants__item-action" type="radio" name="variants__item-color">
-        <span class="indicator"></span>
-    </label>
-
-    <label class="variants__item variants__item--violet" aria-label="color violet">		
-        <input class="variants__item-action" type="radio" name="variants__item-color">
-        <span class="indicator"></span>
-    </label>
+                <div class="job__call-to-action">
+                    <div class="arrow"></div>
+                    <p>Click to watch</p>
+                </div>
+            </div>
+        </div>                
+    </div>
 </div>
-        <fieldset class="rate">
-    <div class="rate__group" role="tablist" tabindex="1" aria-label="rating">
-        <input class="rate__input" type="radio" name="rate" id="star1">
-        <label class="rate__star" for="star1" aria-label="rating very bad"></label>
+    <div class="contacts-wrap pad-block" id="contacts">
+    <div class="container container--left-pad">
 
-        <input class="rate__input" type="radio" name="rate" id="star2"> 
-        <label class="rate__star" for="star2" aria-label="rating bad"></label>
+        <div class="vertical-block">
+            <p class="vertical-block__text">contacts</p>
+        </div>        
 
-        <input class="rate__input" type="radio" name="rate" id="star3"> 
-        <label class="rate__star" for="star3" aria-label="rating normal"></label>
+        <div class="contacts">
+            <div class="contacts__column contacts--grow-1">
+                <h2 class="title-second">My contacts</h2>
 
-        <input class="rate__input" type="radio" name="rate" id="star4" checked> 
-        <label class="rate__star" for="star4" aria-label="rating good"></label>
+                <div class="contacts__info marg-bot-48">
+                    <ul class="contacts__main">
+                        <li class="contacts__main-item list-item phone"><a href="tel:380-97-504-8008">+380(97)504-8008</a></li>
+                        <li class="contacts__main-item list-item email"><a mailto="natalia.satsyuk@gmail.com">natalia.satsyuk@gmail.com</a></li>
+                        <li class="contacts__main-item list-item location">Vinnytsia, Ukraine</li>
+                        <li class="contacts__main-item list-item birthday">born in 19.04.1985</li>                               
+                    </ul>
+                    <div class="contacts__social"></div>
+                </div>
 
-        <input class="rate__input" type="radio" name="rate" id="star5"> 
-        <label class="rate__star" for="star5" aria-label="rating great"></label>
-    </div>						            
-</fieldset>
+                <p class="marg-bot-48">If very briefly: I adore bicycle riding, mountain hiking and river rafting. I really love travelling - it helps to color my life.</p>
+
+                <p class="marg-bot-18 fw-bold">Find me in socials:</p>
+
+                <div class="contacts__social">                    
+                    <a class="contacts__social-item fb" href="https://www.facebook.com/nata.link.92" target="_blank">
+                        <img src='img/svg/fb.svg' alt="fb">
+                    </a>
+                    <a class="contacts__social-item linkedin" href="https://www.linkedin.com/in/nataliya-satsyuk-381077118" target="_blank">
+                        <img src='img/svg/linkedin.svg' alt="linkedin">
+                    </a>   
+                    <a class="contacts__social-item github" href="https://github.com/natalia-satsyuk/" target="_blank">
+                        <img src='img/svg/github.svg' alt="github">
+                    </a>               
+                    <a class="contacts__social-item instagram" href="https://www.instagram.com/nataliyasatsyuk/" target="_blank">
+                        <img src='img/svg/instagram.svg' alt="instagram">
+                    </a>
+                </div>
+            </div>            
+            
+            <div class="contacts__pic box-shadow-block card-hover">
+                <picture class="img-poly">
+                    <source srcset="img/pics/me.webp" type="image/webp">
+                    <source srcset="img/pics/me.jpg">   
         
-<div class="video">
-    <a class="video__link" href="https://youtu.be/neHA4MJwpnY">
-        <picture>
-            <source srcset="https://i.ytimg.com/vi_webp/neHA4MJwpnY/maxresdefault.webp" type="image/webp">
-            <img class="video__media" src="https://i.ytimg.com/vi/neHA4MJwpnY/maxresdefault.jpg" alt="1. Пилот, разборы, ответы и лайвы">
-        </picture>
-    </a>
-    <button class="video__button" type="button" aria-label="Запустить видео">
-        <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
-    </button>
-</div>
-
-
-    </main>
+                    <img src='img/pics/me.jpg' alt="author photo">
+                </picture>
+            </div>
+        </div>
+    </div>
+</div> 
+    <div class="footer">
+    <div class="container">
+        <p>Developed and designed by Nataliya Satsyuk</p>
+    </div>
+</div> 
     
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="js/script.min.js"></script>
-    <script src="js/slick.js"></script>
-
+   
     <!-- for ie-11 images object-fit -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.min.js"></script>
     <script>

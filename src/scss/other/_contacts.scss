@@ -1,0 +1,136 @@
+.contacts-wrap {
+    background-image: url('../../img/pics/lines.jpg');
+    background-image: -webkit-image-set(url('../../img/pics/lines.webp') 1x);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+
+.contacts {
+    $root: &;
+
+    position: relative;
+    display: flex;
+    justify-content: space-between;  
+    font-size: 16px;
+    font-weight: 500;
+
+    @include mobile {
+        flex-wrap: wrap;
+    }  
+    
+    &--grow-1 {
+        flex-grow: 1;
+    }
+
+    &__column {
+        flex-direction: column;
+        margin-right: 30px;
+
+        @include mobile {
+            margin-right: 0;
+            margin-bottom: 30px;;
+        }
+    }    
+
+    &__pic {
+        width: 400px;
+        min-width: 400px;
+        height: auto;
+
+        @include desktop {
+			width: 300px;
+            min-width: 300px;
+        }
+
+        @include tablet {
+			position: absolute;
+            right: -24px;
+            top: -18px;
+            width: 200px;
+            min-width: 200px;
+        }  
+
+        @include mobile {
+            position: static;
+            width: 100%;
+            min-width: 100%;
+        }
+    }   
+
+    &__main-item {  
+
+        &:before {
+            @extend %icon-before-list;
+            width: 20px;
+            height: 20px;
+        }
+        &.phone {
+            &:before {                
+                background-image: url('../../img/svg/call.svg');
+            }  
+        }  
+        
+        &.email {
+            &:before {
+                background-image: url('../../img/svg/mail.svg');
+            }  
+        } 
+
+        &.location {
+            &:before {
+                background-image: url('../../img/svg/location.svg');
+            }  
+        } 
+
+        &.birthday {
+            &:before {
+                background-image: url('../../img/svg/birthday.svg');
+            }  
+        }  
+        
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    &__social {
+        display: flex;
+    }
+
+    &__social-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 30px;   
+        padding-top: 6px; 
+        position: relative;
+        overflow: hidden;    
+        
+        &:after {
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: $line-decor;
+            transform: translateX(-100%);
+            transition: transform .3s ease;
+        }
+
+        &:hover {
+            &:after {
+                transform: translateX(0);
+                transition: transform .3s ease;
+            }
+        }
+    }
+
+    &__social-item + #{$root}__social-item {
+        margin-left: 18px;
+    }
+}
+
