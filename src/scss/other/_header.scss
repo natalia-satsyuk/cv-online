@@ -2,11 +2,16 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%;    
     background: #e2e3e7;
     z-index: 10;
     opacity: .9;
+
+    @include tablet {
+        height: 36px; //for iphons
+    }    
 }
+
 .menu {
     $root: &;
 
