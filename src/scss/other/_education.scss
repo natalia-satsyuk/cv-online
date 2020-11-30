@@ -1,11 +1,6 @@
-.education-wrap {
-    margin-bottom: -60px;
+.education-wrap {    
     position: relative;
-    z-index: 3;
-
-    @include tablet {
-		margin-bottom: 30px;
-    }    
+    z-index: 3; 
 }
 
 .education {

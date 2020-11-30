@@ -8,6 +8,10 @@
 	background-position: center;
 	cursor: pointer;
 	overflow: hidden;
+
+	@include tablet {
+		display: none;
+	}
 }
 
 .slick-prev {

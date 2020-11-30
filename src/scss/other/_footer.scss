@@ -4,10 +4,10 @@
     color: #fff;
 
     @include desktop {
-		padding: 20px 0
+		    padding: 20px 0
     }
     
     @include mobile {
-		font-size: 12px;
-	}
+		    font-size: 12px;
+	  }
 }

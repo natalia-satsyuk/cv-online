@@ -68,25 +68,6 @@ img {
     object-fit: cover;
 }
 
-a,
-.like-a-link {
-  text-decoration: underline;
-  cursor: pointer;
-  color: $blue;
-
-  &:hover {
-     text-decoration: none;
-  }
-
-  &.disabled {
-     opacity: .8;
-  }
-}
-
-.link-no-decor {
-	text-decoration: none;
-  }
-
 ul:not([class]) {
 
   li {
@@ -165,18 +146,6 @@ ol:not([class]) {
 			padding-left: 20px;
 		}
 	}
-}
-
-.uppercase {
-	text-transform: uppercase;
-}
-
-.text-center {
-	text-align: center;
-}
-
-.pointer {
-	cursor: pointer;
 }
 
 .marg-bot-18 {
@@ -268,17 +237,6 @@ ol:not([class]) {
 	transform: translateY(-50%);
 	width: 15px;
 	height: 15px;
-}
-
-$directions: ('top', 'right', 'bottom', 'left');
-$values: (0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60);
-
-@each $direction in $directions {
-  @each $value in $values{
-     .padding-#{$direction}-#{$value} {
-        padding-#{$direction}: #{$value}px!important;
-     }
-  }
 }
 
 //for ie-11 object-fit

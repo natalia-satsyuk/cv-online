@@ -104,7 +104,29 @@
         align-items: center;
         justify-content: center;
         width: 24px;
-        height: 24px;         
+        height: 30px;   
+        padding-top: 6px; 
+        position: relative;
+        overflow: hidden;    
+        
+        &:after {
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: $line-decor;
+            transform: translateX(-100%);
+            transition: transform .3s ease;
+        }
+
+        &:hover {
+            &:after {
+                transform: translateX(0);
+                transition: transform .3s ease;
+            }
+        }
     }
 
     &__social-item + #{$root}__social-item {
