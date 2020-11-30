@@ -2,7 +2,7 @@
     &__item {    
         &:before {
             @extend %icon-before-list;
-            background-image: url('../../img/svg/code.svg');
+            background-image: url('../img/svg/code.svg');
         }
     }
 }

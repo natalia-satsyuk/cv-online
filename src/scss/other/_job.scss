@@ -103,7 +103,7 @@
     &__item {    
         &:before {
             @extend %icon-before-list;
-            background-image: url('../../img/svg/suitcase.svg');
+            background-image: url('../img/svg/suitcase.svg');
         }
     }
 

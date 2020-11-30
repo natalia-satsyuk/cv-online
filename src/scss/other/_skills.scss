@@ -27,7 +27,7 @@
     &__item { 
         &:before {
             @extend %icon-before-list;
-            background-image: url('../../img/svg/skills.svg');
+            background-image: url('../img/svg/skills.svg');
         }
     }
 }
