@@ -32,17 +32,6 @@ body {
 	}
 }
 
-.overlay {   
-	position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 10;
-
-}
-
 p {
 	margin-top: 0;
 	margin-bottom: 0;	
@@ -229,16 +218,9 @@ ol:not([class]) {
 } 
 
 .box-shadow-block {
-	position: relative;
-	transform: translateY(0);
+	position: relative;	
 	border-radius: 2px;
-	box-shadow: 0px 0px 17px -3px #000;
-	transition: transform .3s ease;		
-
-	&:hover {
-		transform: translateY(-20px);
-		transition: transform .3s ease;
-	}
+	box-shadow: 0px 0px 17px -3px #000;	
 	
 	&--pad {
 		padding-top: $pad-vertical-title;
@@ -255,6 +237,16 @@ ol:not([class]) {
 		@include mobile {
 			padding: 30px 22px;
 		}
+	}
+}
+
+.card-hover {
+	transform: translateY(0);
+	transition: transform .3s ease;	
+
+	&:hover {
+		transform: translateY(-20px);
+		transition: transform .3s ease;
 	}
 }
 

@@ -1,5 +1,6 @@
 @@include('webp-class.js')
 @@include('slick.js')
-@@include('popup.js')
-@@include('dropdown.js')
+@@include('dynamics.js')
 @@include('smooth-scroll.js')
+@@include('popup.js')
+@@include('highlight-menu-scroll.js')

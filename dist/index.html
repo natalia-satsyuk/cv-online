@@ -19,8 +19,8 @@
             <button class="menu-icon">
                 <img src='img/svg/menu.svg' alt="linkedin">
             </button>
-            <ul class="menu">
-                <li class="menu__item"><a href="#main" class="menu__link" data-id-nav="main">Main</a></li>
+            <ul class="menu" id="mainNav">
+                <li class="menu__item"><a href="#main" class="menu__link active">Main</a></li>
                 <li class="menu__item"><a href="#experience" class="menu__link" data-id-nav="experience">Experience</a></li>
                 <li class="menu__item"><a href="#inspires" class="menu__link" data-id-nav="inspires">Inspires</a></li>
                 <li class="menu__item"><a href="#skills" class="menu__link" data-id-nav="skills">Skills</a></li>
@@ -48,7 +48,7 @@
             <p class="vertical-block__text">experience</p>
         </div>
 
-        <div class="box-shadow-block box-shadow-block--pad-all wide-mobile bg-white">
+        <div class="box-shadow-block box-shadow-block--pad-all card-hover wide-mobile bg-white">
             <h2 class="title-second">My experience in frontend-developing</h2>
             <ul class="experience">
                 <li class="experience__item list-item">Hand-coded landing pages, promo-pages, email-letters, different components for sites</li>
@@ -96,7 +96,7 @@
         </div>
 
         <div class="skills wide-mobile">
-            <div class="skills__part box-shadow-block bg-gray">
+            <div class="skills__part box-shadow-block card-hover bg-gray">
                 <h2 class="title-second">Strong knowledge of</h2>
                 <ul class="skills__list">
                     <li class="skills__item list-item">HTML, CSS  (including HTML5, CSS3)</li>
@@ -108,7 +108,7 @@
                     <li class="skills__item list-item">Avocode, Zeplin, Figma, Photoshop for coder</li>       
                 </ul>
             </div>
-            <div class="skills__part box-shadow-block bg-gray">
+            <div class="skills__part box-shadow-block card-hover bg-gray">
                 <h2 class="title-second">Experience with</h2>
                 <ul class="skills__list">
                     <li class="skills__item list-item">Basics of JavaScript, JQuery, Vue.js, Twig</li>
@@ -133,13 +133,10 @@
         <div class="projects">
             <figure class="projects__item box-shadow-block">
                 <picture class="img-poly projects__img">
-                    <source media="(min-width: 728px)" srcset="img/pics/home.webp" type="image/webp">
-                    <source media="(min-width: 728px)" srcset="img/pics/home.jpg">
+                    <source srcset="img/pics/home.webp" type="image/webp">
+                    <source srcset="img/pics/home.jpg">
         
-                    <source media="(min-width: 320px)" srcset="img/pics/home.webp" type="image/webp">
-                    <source media="(min-width: 320px)" srcset="img/pics/home.jpg">
-        
-                    <img class="projects__img" src='img/pics/home.jpg' alt="alt">
+                    <img class="projects__img" src='img/pics/home.jpg' alt="home">
                 </picture>
                 <figcaption>
                     <p>Home stuff</p>
@@ -149,13 +146,10 @@
 
             <figure class="projects__item box-shadow-block">
                 <picture class="img-poly projects__img">
-                    <source media="(min-width: 728px)" srcset="img/pics/glasses.webp" type="image/webp">
-                    <source media="(min-width: 728px)" srcset="img/pics/glasses.jpg">
-        
-                    <source media="(min-width: 320px)" srcset="img/pics/glasses.webp" type="image/webp">
-                    <source media="(min-width: 320px)" srcset="img/pics/glasses.jpg">
-        
-                    <img class="projects__img" src='img/pics/glasses.jpg' alt="alt">
+                    <source srcset="img/pics/glasses.webp" type="image/webp">
+                    <source srcset="img/pics/glasses.jpg">
+                
+                    <img class="projects__img" src='img/pics/glasses.jpg' alt="glasses">
                 </picture>
                 <figcaption>
                     <p>Glasses</p>
@@ -165,13 +159,10 @@
                         
             <figure class="projects__item box-shadow-block">
                 <picture class="img-poly projects__img">
-                    <source media="(min-width: 728px)" srcset="img/pics/window.webp" type="image/webp">
-                    <source media="(min-width: 728px)" srcset="img/pics/window.jpg">
+                    <source srcset="img/pics/window.webp" type="image/webp">
+                    <source srcset="img/pics/window.jpg">
         
-                    <source media="(min-width: 320px)" srcset="img/pics/window.webp" type="image/webp">
-                    <source media="(min-width: 320px)" srcset="img/pics/window.jpg">
-        
-                    <img class="projects__img" src='img/pics/window.jpg' alt="alt">
+                    <img class="projects__img" src='img/pics/window.jpg' alt="windows">
                 </picture>
                 <figcaption>
                     <p>Windows</p>
@@ -181,13 +172,10 @@
                         
             <figure class="projects__item box-shadow-block">
                 <picture class="img-poly projects__img">
-                    <source media="(min-width: 728px)" srcset="img/pics/spare-parts.webp" type="image/webp">
-                    <source media="(min-width: 728px)" srcset="img/pics/spare-parts.jpg">
+                    <source srcset="img/pics/spare-parts.webp" type="image/webp">
+                    <source srcset="img/pics/spare-parts.jpg">
         
-                    <source media="(min-width: 320px)" srcset="img/pics/spare-parts.webp" type="image/webp">
-                    <source media="(min-width: 320px)" srcset="img/pics/spare-parts.jpg">
-        
-                    <img class="projects__img" src='img/pics/spare-parts.jpg' alt="alt">
+                    <img class="projects__img" src='img/pics/spare-parts.jpg' alt="spare parts">
                 </picture>
                 <figcaption>
                     <p>Spare parts</p>
@@ -197,13 +185,10 @@
         
             <figure class="projects__item box-shadow-block">
                 <picture class="img-poly projects__img">
-                    <source media="(min-width: 728px)" srcset="img/pics/mountain.webp" type="image/webp">
-                    <source media="(min-width: 728px)" srcset="img/pics/mountain.jpg">
+                    <source srcset="img/pics/mountain.webp" type="image/webp">
+                    <source srcset="img/pics/mountain.jpg">
         
-                    <source media="(min-width: 320px)" srcset="img/pics/mountain.webp" type="image/webp">
-                    <source media="(min-width: 320px)" srcset="img/pics/mountain.jpg">
-        
-                    <img class="projects__img" src='img/pics/mountain.jpg' alt="alt">
+                    <img class="projects__img" src='img/pics/mountain.jpg' alt="mountain">
                 </picture>
                 <figcaption>
                     <p>Mountain</p>
@@ -213,13 +198,10 @@
                         
             <figure class="projects__item box-shadow-block">
                 <picture class="img-poly projects__img">
-                    <source media="(min-width: 728px)" srcset="img/pics/studio.webp" type="image/webp">
-                    <source media="(min-width: 728px)" srcset="img/pics/studio.jpg">
+                    <source srcset="img/pics/studio.webp" type="image/webp">
+                    <source srcset="img/pics/studio.jpg">
         
-                    <source media="(min-width: 320px)" srcset="img/pics/studio.webp" type="image/webp">
-                    <source media="(min-width: 320px)" srcset="img/pics/studio.jpg">
-        
-                    <img class="projects__img" src='img/pics/studio.jpg' alt="alt">
+                    <img class="projects__img" src='img/pics/studio.jpg' alt="studio">
                 </picture>
                 <figcaption>
                     <p>Smart Agency</p>
@@ -229,7 +211,7 @@
         </div>  
     </div>
 </section>
-    <div class="education-wrap pad-block pad-block--pad-0 bg-gray" id="education" data-id-block="education">
+    <div class="education-wrap pad-block pad-block--pad-0 bg-gray" id="education">
     <div class="container container--left-pad">
         <div class="vertical-block">
             <p class="vertical-block__text">education</p>
@@ -240,38 +222,72 @@
 
             <ul class="education">
                 <li class="education__item list-item">2020 Coursera - University of California, Davis "Search Engine Optimization Fundamentals" 
-                    <span class="education__show">(watch sertificate)</span>                              
+                    <span class="education__show">(watch sertificate)</span> 
+
+                    <div class="education__sertificate">                          
+                        <div class="for-overlay">
+                            <div class='main-to-show'>
+                                <picture class="img-poly">
+                                    <source srcset="img/pics/sertificate-seo.webp" type="image/webp">
+                                    <source srcset="img/pics/sertificate-seo.jpg">      
+                        
+                                    <img src='img/pics/sertificate-seo.jpg' alt="seo sertificate">
+                                </picture>
+                
+                                <button class="close" aria-label="close">
+                                    <img src="img/svg/close.svg" alt="close">
+                                </button>
+                            </div>
+                        </div>                                 
+                    </div>                             
                 </li>
+
                 <li class="education__item list-item">2020 Coursera - University of California, Irvine  "Time Management for Personal &amp; Professional Productivity" 
-                    <span class="education__show">(watch sertificate)</span>
-                   
+                    <span class="education__show">(watch sertificate)</span> 
+
+                    <div class="education__sertificate">                          
+                        <div class="for-overlay">
+                            <div class='main-to-show'>
+                                <picture class="img-poly">
+                                    <source srcset="img/pics/sertificate-tm.webp" type="image/webp">
+                                    <source srcset="img/pics/sertificate-tm.jpg">      
+                        
+                                    <img src='img/pics/sertificate-tm.jpg' alt="time-management sertificate">
+                                </picture>
+                
+                                <button class="close" aria-label="close">
+                                    <img src="img/svg/close.svg" alt="close">
+                                </button>
+                            </div>
+                        </div>                                 
+                    </div>                             
                 </li>
-                <li class="education__item list-item">2016 online-course “Ninja-frontend” from “ExNation” 
-                    <span class="education__show">(watch sertificate)</span>
-                  
+
+                <li class="education__item list-item">2016 online-course "Ninja-frontend” from "ExNation" 
+                    <span class="education__show">(watch sertificate)</span> 
+
+                    <div class="education__sertificate">                          
+                        <div class="for-overlay">
+                            <div class='main-to-show'>
+                                <picture class="img-poly">
+                                    <source srcset="img/pics/sertificate-nf.webp" type="image/webp">
+                                    <source srcset="img/pics/sertificate-nf.jpg">      
+                        
+                                    <img src='img/pics/sertificate-nf.jpg' alt="ninja-frontend sertificate">
+                                </picture>
+                
+                                <button class="close" aria-label="close">
+                                    <img src="img/svg/close.svg" alt="close">
+                                </button>
+                            </div>
+                        </div>                                 
+                    </div>                             
                 </li>
+
                 <li class="education__item list-item">2016 VNPU JavaScript courses</li>
                 <li class="education__item list-item">2016 VNPU HTML, CSS, Web-design courses</li>      
-            </ul>
-           
-            <!-- <div class="education__sertificate">
-                <div class="ccc">
-                    <picture class="img-poly">
-                        <source srcset="img/pics/sertificate-seo.webp" type="image/webp">
-                        <source srcset="img/pics/sertificate-seo.jpg">      
-            
-                        <img src='img/pics/sertificate-seo.jpg' alt="alt">
-                    </picture>
-    
-                    <button class="close" aria-label="close">
-                        <img src="img/svg/close.svg" alt="close-share">
-                    </button>
-                </div>                
-            </div>       -->
-            
-        </div>
-
-       
+            </ul>                       
+        </div>       
     </div>
 </div>
     <div class="job-wrap pad-block pad-block--pad-0 bg-gray" id="jobs" data-id-block="jobs">
@@ -286,7 +302,7 @@
                     <div class="dropdown__click" id="dropdown-btn">
                         <h2 class="title-second">Work experience</h2>
                         <button class="dropdown__button">
-                            <img src='img/svg/arrow.svg' alt="alt">
+                            <img src='img/svg/arrow.svg' alt="arrow">
                         </button>
                     </div>
                 </div>
@@ -309,7 +325,7 @@
     <div class="container container--left-pad">
 
         <div class="vertical-block">
-            <p class="vertical-block__text">contacns</p>
+            <p class="vertical-block__text">contacts</p>
         </div>        
 
         <div class="contacts">
@@ -346,12 +362,12 @@
                 </div>
             </div>            
             
-            <div class="contacts__pic box-shadow-block">
+            <div class="contacts__pic box-shadow-block card-hover">
                 <picture class="img-poly">
                     <source srcset="img/pics/me.webp" type="image/webp">
                     <source srcset="img/pics/me.jpg">   
         
-                    <img src='img/pics/me.jpg' alt="alt">
+                    <img src='img/pics/me.jpg' alt="author photo">
                 </picture>
             </div>
         </div>

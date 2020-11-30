@@ -1,15 +1,12 @@
-(function(){
-	let showPopup = document.querySelectorAll('.education__show');
-	let sertificate = document.querySelector('.education__sertificate');
-	let close = document.querySelector('.close');  
-  
-	showPopup.forEach((item) => {
-	  item.onclick = function () { 
-	  sertificate.classList.add('open');
-	}
-	})
-  
-	close.onclick = function () {
-	  sertificate.classList.remove('open');
-	} 	
-  })()
+$(".education__show").click(function () {
+    $(this).parent(".education__item").children(".education__sertificate").addClass("open");
+    $("body").addClass("overlay");
+});
+
+  $(".close").click(function () {
+    $(".education__sertificate").removeClass("open");
+});
+
+  $(".for-overlay").click(function () {
+    $(".education__sertificate").removeClass("open");
+});

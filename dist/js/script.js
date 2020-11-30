@@ -40,21 +40,6 @@ $(document).ready(function(){
 		]
 	});
 });
-(function(){
-	let showPopup = document.querySelectorAll('.education__show');
-	let sertificate = document.querySelector('.education__sertificate');
-	let close = document.querySelector('.close');  
-  
-	showPopup.forEach((item) => {
-	  item.onclick = function () { 
-	  sertificate.classList.add('open');
-	}
-	})
-  
-	close.onclick = function () {
-	  sertificate.classList.remove('open');
-	} 	
-  })()
 function dropDown(){
 	let jobList = document.querySelector('.dropdown');	
 	let drop = document.querySelector('#dropdown-btn');	
@@ -66,7 +51,41 @@ function dropDown(){
 
 dropDown()
 
+// mobile-menu
+	let navButton = document.querySelector('.menu-icon');
+	let menu = document.querySelector('.navigation');	  
+  
+	navButton.onclick = function () { 
+		menu.classList.toggle('open');
+	}
 
+// pop-up sertificates
+	// let showSeoSertificate = document.querySelector('#sertificate-seo-watch');
+	// let showTmSertificate = document.querySelector('#sertificate-tm-watch');
+	// let showNfSertificate = document.querySelector('#sertificate-nf-watch');
+	// let sertificate = document.querySelector('.education__sertificate');
+
+	// let sertificateSeo = document.querySelector('#sertificate-seo');
+	// let sertificateTm = document.querySelector('#sertificate-tm');
+	// let sertificateNf = document.querySelector('#sertificate-nf');
+
+	// let close = document.querySelector('.close');    
+	
+	// showSeoSertificate.onclick = function () { 
+	// 	sertificateSeo.classList.add('open');
+	// }
+
+	// showTmSertificate.onclick = function () { 
+	// 	sertificateTm.classList.add('open');
+	// }
+
+	// showNfSertificate.onclick = function () { 
+	// 	sertificateNf.classList.add('open');
+	// }
+  
+	// close.onclick = function () {
+	//   sertificate.classList.remove('open');
+	// } 
 const navlink = document.querySelectorAll(".menu__link");
 
 navlink.forEach(elem => elem.addEventListener("click", smoothscroll));
@@ -78,4 +97,55 @@ function smoothscroll(event){
         top: document.querySelector(targetId).offsetTop,
         behavior: "smooth"
     })
+}
+$(".education__show").click(function () {
+    $(this).parent(".education__item").children(".education__sertificate").addClass("open");
+    $("body").addClass("overlay");
+});
+
+  $(".close").click(function () {
+    $(".education__sertificate").removeClass("open");
+});
+
+  $(".for-overlay").click(function () {
+    $(".education__sertificate").removeClass("open");
+});
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top+1
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('#mainNav a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('.menu__link').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
 }

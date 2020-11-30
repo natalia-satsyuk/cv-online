@@ -37,6 +37,11 @@
     }
 }
 
+.active {
+    outline: none;
+    background-color:#97a79b;
+}
+
 .menu-icon {
     display: none;
 
@@ -78,6 +83,10 @@
             
             transform: translateX(0);
             transition: all .3s ease; 
+
+            @include mobile {
+                top: 36px;
+            }
             
             &__link {
                 height: 34px;
