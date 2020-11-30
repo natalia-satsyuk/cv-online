@@ -14,69 +14,111 @@ function testWebP(callback) {
     }else{
     document.querySelector('body').classList.add('no-webp');
     }
-    });
-function findVideos() {
-	let videos = document.querySelectorAll('.video');
-
-	for (let i = 0; i < videos.length; i++) {
-		setupVideo(videos[i]);
-	}
-}
-
-function setupVideo(video) {
-	let link = video.querySelector('.video__link');
-	let media = video.querySelector('.video__media');
-	let button = video.querySelector('.video__button');
-	let id = parseMediaURL(media);
-
-	video.addEventListener('click', () => {
-		let iframe = createIframe(id);
-
-		link.remove();
-		button.remove();
-		video.appendChild(iframe);
+});
+$(document).ready(function(){
+	$('.inspire-slider').slick({
+		infinite: true,
+		autoplay: true,
+  		slidesToShow: 3,
+		  slidesToScroll: 1,
+		  
+		  responsive: [
+			{
+			  breakpoint: 720,
+			  settings: {
+				arrows: false,
+				slidesToShow: 2
+			  }
+			},
+			{
+			  breakpoint: 480,
+			  settings: {
+				arrows: false,
+				slidesToShow: 1
+			  }
+			}
+		]
 	});
+});
+function dropDown(){
+	let jobList = document.querySelector('.dropdown');	
+	let drop = document.querySelector('#dropdown-btn');	
 
-	link.removeAttribute('href');
-	video.classList.add('video--enabled');
+	drop.onclick = function () { 
+		jobList.classList.toggle('open');
+	}	
 }
 
-function parseMediaURL(media) {
-	let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
-	let url = media.src;
-	let match = url.match(regexp);
+dropDown()
 
-	return match[1];
+// mobile-menu
+let navButton = document.querySelector('.menu-icon');
+let menu = document.querySelector('.navigation');	  
+
+navButton.onclick = function () { 
+	menu.classList.toggle('open');
 }
 
-function createIframe(id) {
-	let iframe = document.createElement('iframe');
+const navlink = document.querySelectorAll(".menu__link");
 
-	iframe.setAttribute('allowfullscreen', '');
-	iframe.setAttribute('allow', 'autoplay');
-	iframe.setAttribute('src', generateURL(id));
-	iframe.classList.add('video__media');
+navlink.forEach(elem => elem.addEventListener("click", smoothscroll));
 
-	return iframe;
+function smoothscroll(event){
+    event.preventDefault();
+    const targetId = event.currentTarget.getAttribute("href");
+    window.scrollTo({
+        top: document.querySelector(targetId).offsetTop,
+        behavior: "smooth"
+    })
 }
+$(".education__show").click(function () {
+    $(this).parent(".education__item").children(".education__sertificate").addClass("open");
+    $("body").addClass("overlay");
+});
 
-function generateURL(id) {
-	let query = '?rel=0&showinfo=0&autoplay=1';
+  $(".close").click(function () {
+    $(".education__sertificate").removeClass("open");
+});
 
-	return 'https://www.youtube.com/embed/' + id + query;
+  $(".for-overlay").click(function () {
+    $(".education__sertificate").removeClass("open");
+});
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top+1
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('#mainNav a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('.menu__link').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
 }
-
-findVideos();
-(function(){
-	let showPopup = document.querySelector('.share-action');
-	let share = document.querySelector('.share--popup');
-	let close = document.querySelector('.close');	
-
-	showPopup.onclick = function () { 
-	    share.classList.add('open');
-	}
-
-	close.onclick = function () {
-		share.classList.remove('open');
-	}
-})()

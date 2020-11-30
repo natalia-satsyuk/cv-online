@@ -1,0 +1,64 @@
+.main {
+    padding-top: 66px;
+    height: 100vh;
+    min-height: 680px;
+
+    background-image: url('../../img/pics/lamp.jpg');
+    background-image: -webkit-image-set(url('../../img/pics/lamp.webp') 1x);
+    background-size: cover;
+    background-repeat: no-repeat;  
+
+    @include widescreen {
+		min-height: 520px;
+    }	
+    
+    @include desktop {
+		min-height: 440px;
+    }
+
+    @include tablet {
+        min-height: auto;
+        padding-top: 60px;  
+        background-position: top;      
+    }
+
+    @include mobile {
+        padding-top: 40px;        
+    }
+
+    .down {
+        position: relative;
+        display: flex;
+        margin: 0 auto 24px;
+        width: 90px;
+        height: 70px;        
+        background-color: rgba(255,255,255,.5);
+        box-shadow: none;
+        transition: all .3s ease;
+
+        @include desktop {
+            width: 64px;
+            height: 50px;
+        }
+
+        @include tablet {
+            width: 50px;
+            height: 38px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-90deg);
+            width: 28px;
+            height: 28px;
+            background:  url('../../img/svg/arrow-left.svg') center, no-repeat;
+        }
+
+        &:hover {
+            box-shadow: 2px 3px 7px rgba(0,0,0,.3);
+        }
+    }
+}

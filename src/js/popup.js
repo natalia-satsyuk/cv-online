@@ -1,13 +1,12 @@
-(function(){
-	let showPopup = document.querySelector('.share-action');
-	let share = document.querySelector('.share--popup');
-	let close = document.querySelector('.close');	
+$(".education__show").click(function () {
+    $(this).parent(".education__item").children(".education__sertificate").addClass("open");
+    $("body").addClass("overlay");
+});
 
-	showPopup.onclick = function () { 
-	    share.classList.add('open');
-	}
+  $(".close").click(function () {
+    $(".education__sertificate").removeClass("open");
+});
 
-	close.onclick = function () {
-		share.classList.remove('open');
-	}
-})()
+  $(".for-overlay").click(function () {
+    $(".education__sertificate").removeClass("open");
+});
