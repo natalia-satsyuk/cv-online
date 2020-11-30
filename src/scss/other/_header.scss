@@ -13,6 +13,14 @@
     display: flex;
     align-items: center;
 
+    @include tablet {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-100%);
+        transition: all .3s ease; 
+    }
+
     &__link {
         height: 42px;
         display: flex;   
@@ -25,6 +33,55 @@
         &.active {
             outline: none;
             background-color:#97a79b;
+        }
+    }
+}
+
+.menu-icon {
+    display: none;
+
+    @include tablet {
+        display: inline-flex;
+        width: 44px;
+        height: auto;
+        position: relative;
+        z-index: 2;
+    }
+
+    @include mobile {
+        width: 38px;
+    }
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+        padding: 4px 0;
+    }
+
+    &.open {
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            opacity: 1;
+            visibility: visible;
+            position: absolute;
+            width: 300px;
+            height: auto;
+            top: 40px;
+            left: 0;
+            padding-left: 12px;
+            background: #e2e3e7; 
+            
+            transform: translateX(0);
+            transition: all .3s ease; 
+            
+            &__link {
+                height: 34px;
+            }
         }
     }
 }

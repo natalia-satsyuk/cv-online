@@ -20,5 +20,9 @@
             height: 6px;
             background: #a51953;
         }
-    }    
+    } 
+    
+    @include widescreen {
+        display: none;
+    }
 }

@@ -9,10 +9,15 @@
 .contacts {
     $root: &;
 
+    position: relative;
     display: flex;
     justify-content: space-between;  
     font-size: 16px;
     font-weight: 500;
+
+    @include mobile {
+        flex-wrap: wrap;
+    }  
     
     &--grow-1 {
         flex-grow: 1;
@@ -21,12 +26,36 @@
     &__column {
         flex-direction: column;
         margin-right: 30px;
+
+        @include mobile {
+            margin-right: 0;
+            margin-bottom: 30px;;
+        }
     }    
 
     &__pic {
         width: 400px;
         min-width: 400px;
         height: auto;
+
+        @include desktop {
+			width: 300px;
+            min-width: 300px;
+        }
+
+        @include tablet {
+			position: absolute;
+            right: -24px;
+            top: -18px;
+            width: 200px;
+            min-width: 200px;
+        }  
+
+        @include mobile {
+            position: static;
+            width: 100%;
+            min-width: 100%;
+        }
     }   
 
     &__main-item {  

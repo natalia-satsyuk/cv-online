@@ -7,11 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&display=swap" rel="stylesheet"> -->
-
     <link rel="stylesheet" href="css/style.min.css"></link>
-    <title>Gulp</title>
+    <title>Nataliya Satsyuk</title>
 </head>
 <body>  
     <div class="for-overlay"></div> 
@@ -19,6 +16,9 @@
     <header class='header'>
     <div class="container">
         <nav class="navigation">
+            <button class="menu-icon">
+                <img src='img/svg/menu.svg' alt="linkedin">
+            </button>
             <ul class="menu">
                 <li class="menu__item"><a href="#main" class="menu__link" data-id-nav="main">Main</a></li>
                 <li class="menu__item"><a href="#experience" class="menu__link" data-id-nav="experience">Experience</a></li>
@@ -30,26 +30,25 @@
                 <li class="menu__item"><a href="#contacts" class="menu__link" data-id-nav="contacts">Contacts</a></li>
             </ul>
         </nav>
-    </div>  
-     
+    </div>       
 </header>
     <div class="main vertical-center" id="main">
     <div class="container">        
         <h1 class ="title-main">Hi guys<br>
             My name is Nataliya<br>
-            I'm a front end developer</h1>
+            I'm front end developer</h1>
         <p class="title-second">Relax for a few minutes,<br>
             take a sip of coffee and look at my site</p>  
         <a href="#experience" class="down menu__link"></a>
     </div>  
 </div>
-    <div class="experience-wrap pad-block bg-gray" id="experience" data-id-block="experience">
+    <div class="experience-wrap pad-block pad-block--pad-0 bg-gray" id="experience" data-id-block="experience">
     <div class="container container--left-pad">
         <div class="vertical-block">
             <p class="vertical-block__text">experience</p>
         </div>
 
-        <div class="box-shadow-block box-shadow-block--pad-all bg-white">
+        <div class="box-shadow-block box-shadow-block--pad-all wide-mobile bg-white">
             <h2 class="title-second">My experience in frontend-developing</h2>
             <ul class="experience">
                 <li class="experience__item list-item">Hand-coded landing pages, promo-pages, email-letters, different components for sites</li>
@@ -85,18 +84,18 @@
                 <p>Mountain hiking</p>
             </div>
             <div class="inspire-slider__item">
-                <p>Riding a bicycle</p>
+                <p>Bicycle riding</p>
             </div>
         </div>
     </div>
 </div>
-    <div class="skills-wrap pad-block" id="skills" data-id-block="skills">
+    <div class="skills-wrap pad-block pad-block--pad-0" id="skills" data-id-block="skills">
     <div class="container container--left-pad">
         <div class="vertical-block">
             <p class="vertical-block__text">skills</p>
         </div>
 
-        <div class="skills">
+        <div class="skills wide-mobile">
             <div class="skills__part box-shadow-block bg-gray">
                 <h2 class="title-second">Strong knowledge of</h2>
                 <ul class="skills__list">
@@ -230,76 +229,58 @@
         </div>  
     </div>
 </section>
-    <div class="education-wrap pad-block bg-gray" id="education" data-id-block="education">
+    <div class="education-wrap pad-block pad-block--pad-0 bg-gray" id="education" data-id-block="education">
     <div class="container container--left-pad">
         <div class="vertical-block">
             <p class="vertical-block__text">education</p>
         </div>
 
-        <div class="box-shadow-block box-shadow-block--pad-all bg-white">
+        <div class="box-shadow-block box-shadow-block--pad-all wide-mobile bg-white">
             <h2 class="title-second">Educational qualification</h2>
 
             <ul class="education">
                 <li class="education__item list-item">2020 Coursera - University of California, Davis "Search Engine Optimization Fundamentals" 
-                    <span class="education__show">(watch sertificate)</span>
-                    <div class="education__sertificate">
-                        <picture class="img-poly">
-                            <source srcset="img/pics/sertificate-seo.webp" type="image/webp">
-                            <source srcset="img/pics/sertificate-seo.jpg">      
-                
-                            <img src='img/pics/sertificate-seo.jpg' alt="alt">
-                        </picture>
-    
-                        <button class="close" aria-label="close">
-                            <img src="img/svg/close.svg" alt="close-share">
-                        </button>
-                    </div>                
+                    <span class="education__show">(watch sertificate)</span>                              
                 </li>
                 <li class="education__item list-item">2020 Coursera - University of California, Irvine  "Time Management for Personal &amp; Professional Productivity" 
                     <span class="education__show">(watch sertificate)</span>
-                    <div class="education__sertificate">
-                        <picture class="img-poly">
-                            <source srcset="img/pics/sertificate-tm.webp" type="image/webp">
-                            <source srcset="img/pics/sertificate-tm.jpg">      
-                
-                            <img src='img/pics/sertificate-tm.jpg' alt="alt">
-                        </picture>
-    
-                        <button class="close" aria-label="close">
-                            <img src="img/svg/close.svg" alt="close-share">
-                        </button>
-                    </div>
+                   
                 </li>
                 <li class="education__item list-item">2016 online-course “Ninja-frontend” from “ExNation” 
                     <span class="education__show">(watch sertificate)</span>
-                    <div class="education__sertificate">
-                        <picture class="img-poly">
-                            <source srcset="img/pics/sertificate-nf.webp" type="image/webp">
-                            <source srcset="img/pics/sertificate-nf.jpg">      
-                
-                            <img src='img/pics/sertificate-nf.jpg' alt="alt">
-                        </picture>
-    
-                        <button class="close" aria-label="close">
-                            <img src="img/svg/close.svg" alt="close-share">
-                        </button>
-                    </div>
+                  
                 </li>
                 <li class="education__item list-item">2016 VNPU JavaScript courses</li>
                 <li class="education__item list-item">2016 VNPU HTML, CSS, Web-design courses</li>      
             </ul>
+           
+            <!-- <div class="education__sertificate">
+                <div class="ccc">
+                    <picture class="img-poly">
+                        <source srcset="img/pics/sertificate-seo.webp" type="image/webp">
+                        <source srcset="img/pics/sertificate-seo.jpg">      
+            
+                        <img src='img/pics/sertificate-seo.jpg' alt="alt">
+                    </picture>
+    
+                    <button class="close" aria-label="close">
+                        <img src="img/svg/close.svg" alt="close-share">
+                    </button>
+                </div>                
+            </div>       -->
+            
         </div>
 
        
     </div>
 </div>
-    <div class="job-wrap pad-block bg-gray" id="jobs" data-id-block="jobs">
+    <div class="job-wrap pad-block pad-block--pad-0 bg-gray" id="jobs" data-id-block="jobs">
     <div class="container container--left-pad">
         <div class="vertical-block">
             <p class="vertical-block__text">jobs</p>
         </div>
 
-        <div class="box-shadow-block box-shadow-block--pad-all bg-white">
+        <div class="box-shadow-block box-shadow-block--pad-all wide-mobile bg-white">
             <div class="job-helper">
                 <div class="dropdown">
                     <div class="dropdown__click" id="dropdown-btn">
@@ -308,8 +289,6 @@
                             <img src='img/svg/arrow.svg' alt="alt">
                         </button>
                     </div>
-                    
-                    
                 </div>
         
                 <ul class="job dropdown__block">
@@ -323,8 +302,7 @@
                     <p>Click to watch</p>
                 </div>
             </div>
-        </div>
-                
+        </div>                
     </div>
 </div>
     <div class="contacts-wrap pad-block" id="contacts" data-id-block="contacts">
@@ -338,7 +316,7 @@
             <div class="contacts__column contacts--grow-1">
                 <h2 class="title-second">My contacts</h2>
 
-                <div class="contacts__info marg-bot-24">
+                <div class="contacts__info marg-bot-48">
                     <ul class="contacts__main">
                         <li class="contacts__main-item list-item phone"><a href="tel:380-97-504-8008">+380(97)504-8008</a></li>
                         <li class="contacts__main-item list-item email"><a mailto="natalia.satsyuk@gmail.com">natalia.satsyuk@gmail.com</a></li>
@@ -348,9 +326,9 @@
                     <div class="contacts__social"></div>
                 </div>
 
-                <p class="marg-bot-18">If very briefly: I adore bicycle riding, mountain hiking and river rafting. I really love travelling - it helps to color my life.</p>
+                <p class="marg-bot-48">If very briefly: I adore bicycle riding, mountain hiking and river rafting. I really love travelling - it helps to color my life.</p>
 
-                <p class="marg-bot-18 fw-bold">Find me at socials:</p>
+                <p class="marg-bot-18 fw-bold">Find me in socials:</p>
 
                 <div class="contacts__social">                    
                     <a class="contacts__social-item fb" href="https://www.facebook.com/nata.link.92" target="_blank">
@@ -383,28 +361,13 @@
     <div class="container">
         <p>Developed and designed by Nataliya Satsyuk</p>
     </div>
-</div>
-
-    <!-- <main class='container'>      
-       
-        <picture width='50' class="img-poly">
-			<source media="(min-width: 728px)" srcset="img/pics/dd.webp" type="image/webp">
-			<source media="(min-width: 728px)" srcset="img/pics/dd.jpg">
-
-		    <source media="(min-width: 320px)" srcset="img/pics/dd.webp" type="image/webp">
-		    <source media="(min-width: 320px)" srcset="img/pics/dd.jpg">
-
-		    <img width="200" src='img/pics/dd.jpg' alt="alt">
-        </picture>
-        
-    </main> -->
+</div> 
     
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="js/script.min.js"></script>
-    <!-- <script src="js/slick.js"></script> -->
-
+   
     <!-- for ie-11 images object-fit -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.min.js"></script>
     <script>

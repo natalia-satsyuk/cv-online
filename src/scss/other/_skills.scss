@@ -2,12 +2,25 @@
     display: flex;
     justify-content: space-between;
 
+    @include desktop {
+		flex-wrap: wrap;
+    }   
+
     &__part {
         width: 49%;
-        padding: 24px;  
+        padding: 24px; 
+        
+        @include desktop {
+            width: 100%;
+        }
         
         &:first-child {
             margin-right: 24px;
+
+            @include desktop {
+               margin-right: 0;
+               margin-bottom: 30px;
+            }
         }
     }    
 
@@ -18,3 +31,5 @@
         }
     }
 }
+
+	

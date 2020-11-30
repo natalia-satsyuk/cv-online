@@ -2,4 +2,12 @@
     padding: 44px 0;
     background: rgba(#263022, .7);
     color: #fff;
+
+    @include desktop {
+		padding: 20px 0
+    }
+    
+    @include mobile {
+		font-size: 12px;
+	}
 }

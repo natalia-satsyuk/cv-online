@@ -14,4 +14,4 @@ function testWebP(callback) {
     }else{
     document.querySelector('body').classList.add('no-webp');
     }
-    });
+});

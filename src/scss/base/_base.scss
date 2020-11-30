@@ -10,6 +10,7 @@ body {
 	color: $base-text-color;
 	height: 100%;
 	position: relative;
+	scroll-behavior: smooth;
 
 	&,
 	& * {
@@ -24,7 +25,7 @@ body {
 		&:focus {
 			outline: 1px solid #7aabff;	
 
-			@include until($tablet) {
+			@include tablet {
 				outline: none;
 			}
 		}
@@ -42,16 +43,9 @@ body {
 
 }
 
-
-
-
 p {
 	margin-top: 0;
-	margin-bottom: 0;
-
-	@include until($mobile) {
-		margin-bottom: 12px;
-	}
+	margin-bottom: 0;	
 }
 
 ul,
@@ -142,19 +136,45 @@ ol:not([class]) {
 	padding: 0 12px;
 	position: relative;
 
-	@include until($tablet) {
+	@include widescreen {
+		width: 960px;
+		padding: 0 24px;
+	}
+
+	@include desktop {
 		width: 720px;
 		padding: 0 36px;
 	}
 
-	@include until($mobile) {
-		max-width: 400px;
+	@include tablet {
+		max-width: 720px;
 		width: 100%;
-		padding: 0 40px;
+		padding: 0 24px;
+	}
+
+	@include mobile {
+		max-width: 480px;		
+		padding: 0 20px;
 	}
 
 	&--left-pad {
 		padding-left: 60px;
+
+		@include widescreen {
+			padding-left: 24px;
+		}
+
+		@include desktop {
+			padding-left: 36px;
+		}
+	
+		@include tablet {
+			padding-left: 24px;
+		}
+	
+		@include mobile {		
+			padding-left: 20px;
+		}
 	}
 }
 
@@ -178,21 +198,42 @@ ol:not([class]) {
 	margin-bottom: 24px;
 }
 
+.marg-bot-48 {
+	margin-bottom: 48px;
+}
+
 .pad-block {
 	padding: 60px 0;
+
+	@include desktop {
+		padding: 50px 0;
+	}
+
+	@include mobile {
+		padding: 30px 0;
+	}
+
+	&--pad-0 {
+		@include tablet {
+			padding: 0;
+		}
+
+		@include mobile {
+			padding: 0;
+		}
+	}
 }
 
 .fw-bold {
-	font-weight: $weight-bold;;
+	font-weight: $weight-bold;
 } 
 
 .box-shadow-block {
 	position: relative;
 	transform: translateY(0);
 	border-radius: 2px;
-	// box-shadow: 2.5px 4.33px 30px 0px rgb(0, 0, 0);
 	box-shadow: 0px 0px 17px -3px #000;
-	transition: transform .3s ease;	
+	transition: transform .3s ease;		
 
 	&:hover {
 		transform: translateY(-20px);
@@ -206,6 +247,14 @@ ol:not([class]) {
 
 	&--pad-all {
 		padding: $pad-vertical-title;
+
+		@include desktop {
+			padding: 50px 22px;
+		}
+
+		@include mobile {
+			padding: 30px 22px;
+		}
 	}
 }
 
@@ -213,6 +262,10 @@ ol:not([class]) {
 	position: relative;
 	padding-left: $pad-vertical-title;
 	margin-bottom: 12px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 %icon-before-list {
@@ -246,11 +299,37 @@ $values: (0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60);
 .title-main {
 	font-size: 50px;
 	margin-bottom: 62px;
+
+	@include widescreen {
+		font-size: 36px;
+    	margin-bottom: 48px;
+	}
+	
+	@include desktop {
+		font-size: 30px;
+	}
+
+	@include tablet {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
 }	
 
 .title-second {
 	font-size: 40px;
 	margin-bottom: 24px;
+
+	@include widescreen {
+		font-size: 34px;
+	}
+	
+	@include desktop {
+		font-size: 26px;
+	}
+
+	@include tablet {
+		font-size: 20px;
+	}
 
 	&--invert {
 		color: #fff;
@@ -269,5 +348,17 @@ $values: (0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60);
 
 .bg-white {
 	background: #fff;
+}
+
+.wide-mobile {
+	@include tablet {
+		margin-left: -24px;
+    	width: calc(100% + 48px);
+	}
+
+	@include mobile {
+		margin-left: -20px;
+    	width: calc(100% + 40px);
+	}	
 }
 
