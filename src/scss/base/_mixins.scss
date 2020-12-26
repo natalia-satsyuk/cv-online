@@ -1,5 +1,11 @@
+@mixin mobile-small {
+	@media screen and (max-width: $mobile-small) {
+		@content;
+	}
+}
+
 @mixin mobile {
-	@media screen and (max-width: $mobile - 1px) {
+	@media screen and (max-width: $mobile) {
 		@content;
 	}
 }

@@ -4,6 +4,11 @@
     background-size: cover;
     background-repeat: no-repeat; 
     background-attachment: fixed; 
+
+    @include tablet {
+        background-image: url('../img/pics/lines-small.jpg');
+        background-image: -webkit-image-set(url('../img/pics/lines-small.webp') 1x);
+    } 
 }
 
 .contacts {
@@ -45,7 +50,7 @@
 
         @include tablet {
 			position: absolute;
-            right: -24px;
+            right: 0px;
             top: -18px;
             width: 200px;
             min-width: 200px;
@@ -67,25 +72,25 @@
         }
         &.phone {
             &:before {                
-                background-image: url('../../img/svg/call.svg');
+                background-image: url('../img/svg/call.svg');
             }  
         }  
         
         &.email {
             &:before {
-                background-image: url('../../img/svg/mail.svg');
+                background-image: url('../img/svg/mail.svg');
             }  
         } 
 
         &.location {
             &:before {
-                background-image: url('../../img/svg/location.svg');
+                background-image: url('../img/svg/location.svg');
             }  
         } 
 
         &.birthday {
             &:before {
-                background-image: url('../../img/svg/birthday.svg');
+                background-image: url('../img/svg/birthday.svg');
             }  
         }  
         

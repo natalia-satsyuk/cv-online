@@ -3,10 +3,16 @@
     height: 100vh;
     min-height: 680px;
 
+    background-color: #a0aea0;
     background-image: url('../img/pics/lamp.jpg');
     background-image: -webkit-image-set(url('../img/pics/lamp.webp') 1x);
     background-size: cover;
-    background-repeat: no-repeat;  
+    background-repeat: no-repeat; 
+    
+    @include tablet {
+        background-image: url('../img/pics/lamp-small.jpg');
+        background-image: -webkit-image-set(url('../img/pics/lamp-small.webp') 1x);      
+    }
 
     @include widescreen {
 		min-height: 520px;
@@ -23,6 +29,11 @@
     }
 
     @include mobile {
+        padding-top: 40px;   
+        background-position: top 0 right -24px;     
+    }
+
+    @include mobile-small {
         padding-top: 40px;   
         background-position: top 0 right -68px;     
     }

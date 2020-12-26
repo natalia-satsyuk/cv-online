@@ -4,6 +4,11 @@
     background-size: cover;
     background-repeat: no-repeat; 
     background-attachment: fixed; 
+
+    @include tablet {
+        background-image: url('../img/pics/squares-small.jpg');        
+        background-image: -webkit-image-set(url('../img/pics/squares-small.webp') 1x);
+    }
 }
 
 .projects {
