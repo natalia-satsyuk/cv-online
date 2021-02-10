@@ -39,14 +39,8 @@ let {src, dest} = require('gulp'),
     clean_css = require("gulp-clean-css"),
     rename = require("gulp-rename"),
     uglify = require("gulp-uglify-es").default,
-    // babel = require("gulp-babel").default,
     imagemin = require("gulp-imagemin"),
-    webp = require("gulp-webp");
-    // webphtml = require("gulp-webp-html"),
-    // webpcss = require("gulp-webpcss");
-    // ttf2woff = require("gulp-ttf2woff"),
-    // ttf2woff2 = require("gulp-ttf2woff2");
-    
+    webp = require("gulp-webp");    
 
 function browserSync(params) {
     browsersync.init({
@@ -61,7 +55,6 @@ function browserSync(params) {
 function html() {
     return src(path.src.html)
         .pipe(fileinclude())
-        // .pipe(webphtml())
         .pipe(dest(path.build.html))
         .pipe(browsersync.stream())
 }
@@ -80,11 +73,6 @@ function css() {
                 cascade: true
             })
         )
-        // .pipe(
-        //     webpcss({
-        //         webpClass: '.webp',noWebpClass: '.no-webp'
-        //     })
-        // )
         .pipe(dest(path.build.css))
         .pipe(clean_css())
         .pipe(
